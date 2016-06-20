@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=greek,latin,cyrillic-ext,cyrillic);
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+// Floats
+.f {
+
+  &l {
+    float: left;
+  }
+
+  &r {
+    float: right;
+  }
+}
+
+// Btns
+.btn {
+}
+
+// Main container
+.main-container {
+}
+
+// Inputs
+.input {
+
+  &-wrap {
+  }
+
+  &-text {
+  }
+}
+
+.textarea {
+}
+
+// Radio input
+.radio-wrap {
+
+  input[type='radio'] {
+    display: none;
+    &:checked + .radio-wrap__label {
+      &:after {
+      }
+    }
+  }
+
+  &__label {
+
+    &:before,
+    &:after {
+    }
+
+    &:before {
+    }
+
+    &:after {
+    }
+  }
+}
+
+// media
+.media {
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+
+  &-top {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+
+  &-middle {
+    vertical-align: middle;
+    display: table-cell;
+    box-sizing: border-box;
+  }
+}
+
+// Title
+.main-title {
+}
+
+// Text content
+.text-content {
+}
+
+
+// triangle borders
+
+.tape-yellow__low {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background-image: url(../images/icons/yellow-low.png);
+    background-size: auto 100%;
+  }
+
+  &:before {
+    right: 100%;
+  }
+
+  &:after {
+    left: 100%;
+    background-position: -14px 0;
+  }
+}

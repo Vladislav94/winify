@@ -1,0 +1,161 @@
+.header {
+  background-color: $violet2e;
+
+  &-inner {
+    width: 1440px;
+    margin: 0 auto;
+    @extend %clearfix;
+
+    @media #{$desk1440} {
+      width: 1250px;
+    }
+
+    @media #{$desk1250} {
+      width: 992px;
+    }
+
+    @media #{$desk992} {
+      width: 768px;
+    }
+  }
+
+  &-logo {
+    display: block;
+    width: 183px;
+    float: left;
+    background-color: $violet20;
+    padding: 23px 0 6px;
+    position: relative;
+
+    @media #{$desk992} {
+      width: 170px;
+      padding-bottom: 12px;
+      background-color: $violet27;
+
+      &:after {
+       content: '';
+       width: 0;
+       height: 0;
+       display: block;
+       top: 0;
+       right: 0;
+       position: absolute;
+       border: 35px solid transparent;
+       border-bottom-width: 36px;
+       border-right-color: $violet2e;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+
+      @media #{$desk992} {
+        height: 36px;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &-box {
+    padding-left: 183px;
+    position: relative;
+  }
+
+  &-nav {
+    @extend %clearfix;
+
+    @media #{$desk992} {
+      position: absolute;
+      top: 100%;
+      background-color: red;
+    }
+  }
+
+  &-list {
+    @extend %clearfix;
+    padding-left: 15px;
+    float: left;
+
+    &__item {
+      float: left;
+      color: $white;
+
+      &:hover {
+        color: $yellowbb;
+      }
+    }
+
+    &__link {
+      color: inherit;
+      text-decoration: none;
+      font-size: 18px;
+      transition: $trans;
+      display: block;
+      padding: 31px 16px;
+
+      @media #{$desk1250} {
+        padding: 31px 10px;
+      }
+    }
+  }
+
+  &-lang {
+    float: left;
+    padding: 22px 0;
+    margin-left: 15px;
+
+    @media #{$desk1250} {
+      margin-left: 10px;
+    }
+  }
+
+  &-r {
+    float: right;
+  }
+
+  &-dep {
+    display: inline-block;
+    color: $gray1d;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: $yellowd5;
+    padding: 9px 19px;
+    margin: 20px 0;
+  }
+
+  &-user {
+    margin-left: 39px;
+    margin-right: 9px;
+    font-size: 18px;
+    vertical-align: middle;
+    float: right;
+    padding: 14px 0;
+
+    @media #{$desk1250} {
+      margin-left: 29px;
+    }
+
+    &__name {
+      color: $yellowd8;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 7px;
+        background-image: url(../images/icons/user-arrow-down.png);
+        vertical-align: middle;
+        margin-left: 10px;
+        margin-top: -1px;
+      }
+    }
+
+    &__cash {
+      text-transform: uppercase;
+      color: $white;
+      margin-top: 5px;
+      display: inline-block;
+    }
+  }
+}

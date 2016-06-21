@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=greek,latin,cyrillic-ext,cyrillic);
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-family: $rBlack;
+  font-weight: 600;
 }
 
 // Floats
@@ -22,6 +22,9 @@ body {
 
 // Main container
 .main-container {
+  width: 1440px;
+  margin: 0 auto;
+  @extend %clearfix;
 }
 
 // Inputs
@@ -90,29 +93,103 @@ body {
 }
 
 
-// triangle borders
+// tape borders
 
-.tape-yellow__low {
-  position: relative;
+.tape-yellow {
 
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    background-image: url(../images/icons/yellow-low.png);
-    background-size: auto 100%;
+  &__low {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      background-image: url(../images/icons/yellow-low.png);
+      background-size: auto 100%;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+      background-position: -14px 0;
+    }
   }
 
-  &:before {
-    right: 100%;
+  &__mid {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      width: 19px;
+      background-image: url(../images/icons/yellow-middle.png);
+      background-size: auto 100%;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+      background-position: -24px 0;
+    }
   }
 
-  &:after {
-    left: 100%;
-    background-position: -14px 0;
+  &__high {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 29px;
+      background-image: url(../images/icons/yellow-high.png);
+      background-size: auto 100%;
+      left: 100%;
+    }
+
+  }
+}
+
+.tape-trans {
+
+  &__mid {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      width: 19px;
+      background-image: url(../images/icons/trans-middle.png);
+      background-size: auto 100%;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+      background-position: -24px 0;
+    }
+
   }
 }

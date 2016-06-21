@@ -4,8 +4,11 @@
 @import "base/fonts";
 @import "base/base";
 
-// pages
+// Layout
 @import "layout/header";
 @import "layout/main";
 @import "layout/sb";
 @import "layout/footer";
+
+// Pages
+@import "pages/affiliate";

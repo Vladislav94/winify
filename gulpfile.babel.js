@@ -77,7 +77,6 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
-    tunnel: "lance",
     server: {
       baseDir: ['.tmp', 'app'],
       routes: {

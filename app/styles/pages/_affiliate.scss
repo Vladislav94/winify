@@ -1,0 +1,132 @@
+.autho-section {
+  background: url(../images/authorization.png) center top repeat-x;
+  padding-top: 78px;
+  padding-bottom: 123px;
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    font-size: 60px;
+    color: $blue01;
+    background-color: $yellowd8;
+    display: inline-block;
+    padding: 24px 35px 26px 100px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 60px;
+    color: $yellowd8;
+    padding-left: 100px;
+    text-transform: uppercase;
+    line-height: 1.1;
+
+    span {
+      font-size: 132px;
+    }
+  }
+
+  &__box {
+    float: right;
+    margin: 120px-75px 70px 0 0;
+    background-color: rgba($violet16, .8);
+    padding: 40px 30px 25px 25px;
+    width: 345px;
+    box-sizing: border-box;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 6px;
+      background-image: url(../images/icons/autho-box-tape.png);
+      opacity: .8;
+    }
+
+    &:before {
+      bottom: 100%;
+    }
+
+    &:after {
+      top: 100%;
+      background-position: 0 -10px;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    margin: 22px 19px;
+    text-decoration: none;
+    border-top: 3px solid $yellowd8;
+    border-bottom: 3px solid $yellowd8;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 14px 0;
+    transition: color .2s linear;
+  }
+
+  &__log {
+    color: $yellowd8;
+
+    &:hover {
+      background-color: $yellowd8;
+      color: $violet20;
+
+      &:before,
+      &:after {
+        background-image: url(../images/icons/yellow-middle.png);
+      }
+    }
+  }
+
+  &__sig {
+    color: $violet20;
+    background-color: $yellowd8;
+
+    &:hover {
+      background: none;
+      color: $yellowd8;
+
+      &:before,
+      &:after {
+        background-image: url(../images/icons/trans-middle.png);
+      }
+    }
+  }
+}
+
+.quote-section {
+  background: url(../images/quote.png) center top repeat-x;
+  margin-top: -8px;
+
+  &__text {
+    font-size: 50px;
+    color: $blue00;
+    text-transform: uppercase;
+    width: 950px;
+    line-height: 1.1;
+    padding: 100px 0 0 100px;
+    position: relative;
+
+    &:before {
+      content: '"';
+      font-size: 220px;
+      position: absolute;
+      top: 0;
+      left: 70px;
+      font-family: $aBold;
+    }
+  }
+
+  &__name {
+    font-size: 35px;
+    color: $blue00;
+    text-align: right;
+    padding-right: 100px;
+  }
+}

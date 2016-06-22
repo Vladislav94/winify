@@ -103,6 +103,7 @@
 .quote-section {
   background: url(../images/quote.png) center top repeat-x;
   margin-top: -8px;
+  padding: 45px 0;
 
   &__text {
     font-size: 50px;
@@ -128,5 +129,208 @@
     color: $blue00;
     text-align: right;
     padding-right: 100px;
+  }
+}
+
+.service {
+
+  &-section {
+    background: url(../images/service.png) center top repeat-x;
+    margin-top: -10px;
+    padding: 30px 0 60px;
+  }
+
+  &-list {
+    @extend %clearfix;
+    width: 1250px;
+    margin: 0 auto;
+
+    &__top {
+      height: 290px;
+      text-align: center;
+      font-size: 40px;
+      color: $white;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      span {
+        font-size: 80px;
+      }
+
+      .fa {
+        font-size: 129px;
+      }
+
+      &.dark-text {
+        color: $gray20;
+      }
+    }
+
+    &__item {
+      float: left;
+      width: 290px;
+      margin: 25px 25px 25px 0;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+        clear: right;
+      }
+
+      &:nth-child(4n+1) {
+        clear: left;
+      }
+    }
+
+    &__text {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $gray20;
+      margin-top: 30px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.commiss {
+
+  &-section {
+    background: url(../images/commission.png) center top repeat-x;
+    margin-top: -10px;
+    color: $pinkff;
+    padding: 70px 0 60px;
+
+    .main-container {
+      padding: 0 95px;
+    }
+  }
+
+  &-title {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    font-size: 35px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &-list {
+    @extend %clearfix;
+    margin: 35px 0;
+
+    &__item {
+      float: left;
+      width: 288px;
+      margin: 20px 32px 20px 0;
+      height: 210px;
+      position: relative;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &.pink {
+        background-color: $pinkc8;
+        color: $pinkff;
+
+        .commiss-list__footer {
+          color: $pinkc8;
+          background-color: $pinkff;
+        }
+      }
+
+      &.violet {
+        background-color: $violet1e;
+        color: $violet82;
+
+        .commiss-list__footer {
+          color: $violet1e;
+          background-color: $violet82;
+
+          &:before {
+            background-position: 0 -13px;
+          }
+        }
+      }
+
+      &.green {
+        background-color: $green86;
+        color: $greene7;
+
+        .commiss-list__footer {
+          color: $green86;
+          background-color: $greene7;
+
+          &:before {
+            background-position: 0 -23px;
+          }
+        }
+      }
+
+      &.yellow {
+        background-color: $yellowd8;
+        color: $yellowfc;
+
+        .commiss-list__footer {
+          color: $yellowd8;
+          background-color: $yellowfc;
+
+          &:before {
+            background-position: 0 -33px;
+          }
+        }
+      }
+    }
+
+    &__text {
+      font-size: 80px;
+      text-align: center;
+      color: inherit;
+      margin-top: 40px;
+    }
+
+    &__footer {
+      background-color: $white;
+      font-size: 18px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 18px 0;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        height: 7px;
+        right: 0;
+        background-image: url(../images/icons/com-items-border.png);
+        background-position: 0 -3px;
+      }
+    }
+  }
+
+  &-footer {
+    text-align: center;
+    padding-top: 18px;
+  }
+
+  &-link {
+    color: $pink93;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $pinkff;
+    padding: 17px 10px;
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    box-sizing: border-box;
+    text-align: center;
   }
 }

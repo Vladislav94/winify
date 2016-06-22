@@ -25,6 +25,7 @@ body {
   width: 1440px;
   margin: 0 auto;
   @extend %clearfix;
+  box-sizing: border-box;
 }
 
 // Inputs
@@ -189,6 +190,35 @@ body {
     &:after {
       left: 100%;
       background-position: -24px 0;
+    }
+
+  }
+}
+
+.tape-pink {
+
+  &__mid {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      width: 16px;
+      background-image: url(../images/icons/pink-middle.png);
+      background-size: auto 100%;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+      background-position: -22px 0;
     }
 
   }

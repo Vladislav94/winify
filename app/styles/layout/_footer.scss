@@ -1,2 +1,103 @@
 .footer {
+	background: url(../images/footer.png) center top repeat-x;
+	margin-top: -8px;
+	padding: 45px 0;
+	
+	&-partners {
+		margin-bottom: 30px;
+		display: table;
+		width: 100%;
+		text-align: center;
+		
+		&__item {
+			display: table-cell;
+			vertical-align: middle;
+			
+			img {
+				margin: 0 15px;
+			}
+		}
+	}
+	
+	&-inner {
+		padding: 40px 0;
+		@extend %clearfix;
+	}
+	
+	&-nav {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex; 
+		
+		float: left;
+		width: 65%;
+		
+		&__list {
+			flex: 1 auto;
+		}
+		
+		h4 {
+			font-size: 15px;
+			color: $yellowd8;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+		
+		ul {
+			li {
+				margin-bottom: 15px;
+			}
+			
+			a {
+				font-family: $roboto;
+				font-weight: $light;
+				font-size: 15px;
+				color: $yellowd8;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: all, 0.4s, linear;
+				
+				&:hover {
+					border-bottom-color: $yellowd8;
+				}
+			}
+		}
+	}
+	
+	&-social {
+		padding: 25px 90px;
+		text-align: center;
+		float: right;
+		width: 35%;
+		background: rgba(#1a1823, .75);
+		
+		h5 {
+			font-size: 15px;
+			color: $yellowd8;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+		
+		&__inner {
+			a {
+				display: inline-block;
+				margin: 10px;
+				font-size: 55px;
+				color: $yellowd8;
+				transition: all, 0.4s, linear;
+				
+				&:hover {
+					opacity: .6;
+				}
+			}
+		}
+	}
+	
+	&-logo {
+		text-align: center;
+		padding: 130px 0 20px;
+	}
 }

@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=greek,latin,cyrillic-ext,cyrillic);
+
+* {
+	box-sizing: border-box;
+}
+
 body {
   font-family: $rBlack;
   font-weight: 600;
@@ -26,6 +31,12 @@ body {
   margin: 0 auto;
   @extend %clearfix;
   box-sizing: border-box;
+}
+
+.triangle-line {
+	background: url(../images/icons/triangle-line.png) repeat-x;
+	display: block;
+	height: 10px;
 }
 
 // Inputs

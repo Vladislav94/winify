@@ -437,8 +437,12 @@
   &-section {
     background: url(../images/contacts.png) center top repeat-x;
     margin-top: -10px;
-    padding: 60px 0 55px;
+    padding: 70px 0 25px;
     color: $blue18;
+
+    .main-container {
+      padding: 0 60px;
+    }
   }
 
   &-title {
@@ -448,16 +452,32 @@
 
   &-text {
     font-size: 35px;
-    margin-top: 20px;
+    margin-top: 25px;
+    line-height: 1.2;
+    text-transform: uppercase;
   }
 
   &-list {
     text-align: center;
+    margin-top: 20px;
 
     &__item {
       display: inline-block;
       float: none;
       vertical-align: top;
+      margin: 25px 15px;
+
+      &.pink {
+        .contacts-list__text {
+          color: $pinkd9;
+        }
+      }
+
+      &.gray {
+        .contacts-list__text {
+          color: $gray20;
+        }
+      }
 
       .fa {
         font-size: 144px;

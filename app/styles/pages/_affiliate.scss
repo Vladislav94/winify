@@ -368,23 +368,19 @@
       transition: $trans;
       margin-bottom: 45px;
       cursor: pointer;
-      
-      span {
-        position: relative;
-        display: inline;
+      position: relative;
 
-        &:after {
-          content: '';
-          position: absolute;
-          height: 12px;
-          left: 0;
-          right: 0;
-          top: 100%;
-          padding-top: 10px;
-          transition: $trans;
-          background: url(../images/icons/faq-item-line.png) left bottom repeat-x;
-          opacity: 0;
-        }
+      &:after {
+        content: '';
+        position: absolute;
+        height: 12px;
+        left: 0;
+        width: 207px;
+        top: 100%;
+        padding-top: 10px;
+        transition: $trans;
+        background: url(../images/icons/faq-item-line.png) left bottom repeat-x;
+        opacity: 0;
       }
 
       &:last-child {
@@ -394,11 +390,8 @@
       &.active,
       &:hover {
         color: $yellowc4;
-
-        span {
-          &:after {
-            opacity: 1;
-          }
+        &:after {
+          opacity: 1;
         }
       }
     }

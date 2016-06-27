@@ -334,3 +334,141 @@
     text-align: center;
   }
 }
+
+.faq {
+
+  &-section {
+    background: url(../images/faq.png) center top repeat-x;
+    margin-top: -10px;
+    color: $white;
+    padding: 77px 0 120px;
+  }
+
+  &-title {
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-left: 335px;
+  }
+
+  &-body {
+    @extend %clearfix;
+    margin-top: 70px;
+  }
+
+  &-list {
+    float: left;
+    width: 336px;
+    box-sizing: border-box;
+    padding: 5px 25px 0;
+    font-size: 18px;
+
+    &__item {
+      color: rgba($white, .5);
+      text-transform: uppercase;
+      transition: $trans;
+      margin-bottom: 45px;
+      cursor: pointer;
+      
+      span {
+        position: relative;
+        display: inline;
+
+        &:after {
+          content: '';
+          position: absolute;
+          height: 12px;
+          left: 0;
+          right: 0;
+          top: 100%;
+          padding-top: 10px;
+          transition: $trans;
+          background: url(../images/icons/faq-item-line.png) left bottom repeat-x;
+          opacity: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active,
+      &:hover {
+        color: $yellowc4;
+
+        span {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .fa {
+      width: 30px;
+    }
+  }
+
+  &-tab {
+
+    &s__sections {
+      margin-left: 336px;
+      position: relative;
+      font-size: 25px;
+      margin-right: 90px;
+
+      .faq-tab__title:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &__title {
+      color: $yellowd5;
+      margin: 45px 0 20px;
+    }
+
+    &__text {
+      line-height: 1.2;
+    }
+  }
+}
+
+.contacts {
+
+  &-section {
+    background: url(../images/contacts.png) center top repeat-x;
+    margin-top: -10px;
+    padding: 60px 0 55px;
+    color: $blue18;
+  }
+
+  &-title {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    font-size: 35px;
+    margin-top: 20px;
+  }
+
+  &-list {
+    text-align: center;
+
+    &__item {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+
+      .fa {
+        font-size: 144px;
+      }
+    }
+
+    &__text {
+      margin-top: 35px;
+      font-size: 25px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+  }
+}

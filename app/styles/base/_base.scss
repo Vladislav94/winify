@@ -234,3 +234,28 @@ body {
 
   }
 }
+
+// tabs
+
+.tabs {
+
+  &-list {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      transition: $trans;
+    }
+  }
+}

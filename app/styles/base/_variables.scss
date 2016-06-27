@@ -28,10 +28,12 @@ $yellowbb: #bbc13d;
 $yellowd5: #d5dd27;
 $yellowd8: #d8df2e;
 $yellowfc: #fcffb0;
+$yellowc4: #c4cb2b;
 
 // Blue
 $blue01: #010963;
 $blue00: #00aeef;
+$blue18: #18154c;
 
 // Green
 $green86: #86b70f;
@@ -41,9 +43,10 @@ $greene7: #e7feaf;
 $pinkff: #ff95d6;
 $pinkc8: #c82087;
 $pink93: #93025b;
+$pinkd9: #d9238c;
 
 // trans
-$trans: .2s;
+$trans: .2s linear;
 
 // media
 $desk1440: "only screen and (max-width : 1440px)";

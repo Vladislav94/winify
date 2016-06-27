@@ -2,6 +2,10 @@
 	background: url(../images/footer.png) center top repeat-x;
 	margin-top: -8px;
 	padding: 45px 0;
+
+	.main-container {
+		padding: 0 95px;
+	}
 	
 	&-partners {
 		margin-bottom: 30px;
@@ -12,6 +16,18 @@
 		&__item {
 			display: table-cell;
 			vertical-align: middle;
+
+			&:first-of-type {
+				img {
+					margin-left: 0;
+				}
+			}
+
+			&:last-of-type {
+				img {
+					margin-right: 0;
+				}
+			}
 			
 			img {
 				margin: 0 15px;

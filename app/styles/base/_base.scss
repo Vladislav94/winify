@@ -31,6 +31,19 @@ body {
   margin: 0 auto;
   @extend %clearfix;
   box-sizing: border-box;
+
+  @media #{$desk1440} {
+    width: 1250px;
+  }
+
+  @media #{$desk1250} {
+    width: 992px;
+  }
+
+  @media #{$desk992} {
+    width: 768px;
+    padding: 0 10px;
+  }
 }
 
 .triangle-line {
@@ -257,5 +270,36 @@ body {
       position: relative;
       transition: $trans;
     }
+  }
+}
+
+// section line
+.line-top {
+  position: relative;
+
+  &:before {
+    content: '';
+    left: 0;
+    right: 0;
+    height: 8px;
+    bottom: 100%;
+    display: block;
+    position: absolute;
+    background-position: center;
+  }
+}
+
+.line-bottom {
+  position: relative;
+
+  &:after {
+    content: '';
+    left: 0;
+    right: 0;
+    height: 8px;
+    top: 100%;
+    display: block;
+    position: absolute;
+    background-position: center;
   }
 }

@@ -1,11 +1,3 @@
-// Mix
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 
 // Fonts
 
@@ -29,6 +21,7 @@ $yellowd5: #d5dd27;
 $yellowd8: #d8df2e;
 $yellowfc: #fcffb0;
 $yellowc4: #c4cb2b;
+$yellowe1: #e1e92b;
 
 // Blue
 $blue01: #010963;
@@ -61,4 +54,11 @@ $aBold: 'Arial-bold';
 $light: 300;
 $normal: 400;
 $medium: 500;
-$bold: 700;
+$bold: 700;// Mix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

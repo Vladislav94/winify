@@ -1,9 +1,15 @@
 .autho-section {
-  background: url(../images/authorization.png) center top repeat-x;
+  background: url(../images/authorization.png) center top;
   padding-top: 78px;
-  padding-bottom: 123px;
+  padding-bottom: 115px;
   position: relative;
   z-index: 1;
+
+  &.line-bottom {
+    &:after {
+      background-image: url(../images/authorization-line.png);
+    }
+  }
 
   &__title {
     font-size: 60px;
@@ -101,9 +107,15 @@
 }
 
 .quote-section {
-  background: url(../images/quote.png) center top repeat-x;
-  margin-top: -8px;
+  background: url(../images/quote.png) center top;
   padding: 45px 0;
+
+  &.line-bottom {
+
+    &:after {
+      background-image: url(../images/quote-line.png);
+    }
+  }
 
   &__text {
     font-size: 50px;
@@ -135,9 +147,15 @@
 .service {
 
   &-section {
-    background: url(../images/service.png) center top repeat-x;
-    margin-top: -10px;
+    background: url(../images/service.png) center top;
     padding: 30px 0 60px;
+
+    &.line-top {
+      
+      &:before {
+        background-image: url(../images/service-line.png);
+      }
+    }
   }
 
   &-list {
@@ -145,12 +163,18 @@
     width: 1250px;
     margin: 0 auto;
 
+    @media #{$desk1440} {
+      width: 100%;
+    }
+
     &__top {
       height: 290px;
+      width: 290px;
       text-align: center;
       font-size: 40px;
       color: $white;
       background-size: 100%;
+      margin: 0 auto;
       background-repeat: no-repeat;
 
       span {
@@ -179,6 +203,52 @@
       &:nth-child(4n+1) {
         clear: left;
       }
+
+      @media #{$desk1250} {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        &:nth-child(4n) {
+          margin-right: 20px;
+          clear: none;
+        }
+
+        &:nth-child(4n+1) {
+          clear: none;
+        }
+        &:nth-child(3n) {
+          margin-right: 20px;
+          clear: right;
+        }
+
+        &:nth-child(3n+1) {
+          clear: left;
+        }
+      }
+
+      @media #{$desk992} {
+        margin-left: 0;
+        margin-right: 0;
+        width: 50%;
+        padding: 0 20px;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+          clear: none;
+        }
+
+        &:nth-child(3n+1) {
+          clear: none;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+          clear: right;
+        }
+
+        &:nth-child(2n+1) {
+          clear: left;
+        }
+      }
     }
 
     &__text {
@@ -194,13 +264,23 @@
 .commiss {
 
   &-section {
-    background: url(../images/commission.png) center top repeat-x;
-    margin-top: -10px;
+    background: url(../images/commission.png) center top;
     color: $pinkff;
-    padding: 70px 0 60px;
+    padding: 70px 0 50px;
 
     .main-container {
       padding: 0 95px;
+
+      @media #{$desk1440} {
+        padding: 0;
+      }
+    }
+
+    &.line-top {
+      
+      &:before {
+        background-image: url(../images/commission-line.png);
+      }
     }
   }
 
@@ -220,6 +300,14 @@
     @extend %clearfix;
     margin: 35px 0;
 
+    @media #{$desk1250} {
+      margin: 35px 32px;
+    }
+
+    @media #{$desk992} {
+      margin: 35px 80px;
+    }
+
     &__item {
       float: left;
       width: 288px;
@@ -229,6 +317,28 @@
 
       &:nth-child(4n) {
         margin-right: 0;
+      }
+
+      @media #{$desk1250} {
+
+        &:nth-child(4n) {
+          margin-right: 32px;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @media #{$desk992} {
+
+        &:nth-child(3n) {
+          margin-right: 32px;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
       }
 
       &.pink {
@@ -338,10 +448,16 @@
 .faq {
 
   &-section {
-    background: url(../images/faq.png) center top repeat-x;
-    margin-top: -10px;
+    background: url(../images/faq.png) center top;
     color: $white;
-    padding: 77px 0 120px;
+    padding: 77px 0 110px;
+
+    &.line-top {
+      
+      &:before {
+        background-image: url(../images/faq-line.png);
+      }
+    }
   }
 
   &-title {
@@ -409,6 +525,10 @@
       font-size: 25px;
       margin-right: 90px;
 
+      @media #{$desk1440} {
+        margin-right: 20px;
+      }
+
       .faq-tab__title:first-of-type {
         margin-top: 0;
       }
@@ -428,13 +548,23 @@
 .contacts {
 
   &-section {
-    background: url(../images/contacts.png) center top repeat-x;
-    margin-top: -10px;
+    background: url(../images/contacts.png) center top;
     padding: 70px 0 25px;
     color: $blue18;
 
     .main-container {
       padding: 0 60px;
+
+      @media #{$desk1250} {
+        padding: 0 20px;
+      }
+    }
+
+    &.line-top {
+      
+      &:before {
+        background-image: url(../images/contacts-line.png);
+      }
     }
   }
 
@@ -454,11 +584,25 @@
     text-align: center;
     margin-top: 20px;
 
+    @media #{$desk992} {
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
     &__item {
       display: inline-block;
       float: none;
       vertical-align: top;
       margin: 25px 15px;
+
+      @media #{$desk992} {
+        margin-left: 0;
+        margin-right: 0;
+        float: left;
+      }
 
       &.pink {
         .contacts-list__text {

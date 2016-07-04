@@ -274,32 +274,18 @@ body {
 }
 
 // section line
-.line-top {
+.fangs-line {
   position: relative;
 
   &:before {
     content: '';
     left: 0;
     right: 0;
-    height: 8px;
+    height: 7px;
     bottom: 100%;
     display: block;
     position: absolute;
-    background-position: center;
-  }
-}
-
-.line-bottom {
-  position: relative;
-
-  &:after {
-    content: '';
-    left: 0;
-    right: 0;
-    height: 8px;
-    top: 100%;
-    display: block;
-    position: absolute;
-    background-position: center;
+		background-repeat: repeat-x;
+		background-image: url(../images/icons/fangs.png);
   }
 }

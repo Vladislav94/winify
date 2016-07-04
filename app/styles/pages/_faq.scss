@@ -1,21 +1,112 @@
+.faq {
+  &-section {
+    background: url(../images/bg/faq-bg.jpg) center top;
+    color: $white;
+    padding: 77px 0 110px;
+
+		&.fangs-line {
+      &:before {
+        background-position: center -18px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-left: 335px;
+  }
+
+  &-body {
+    @extend %clearfix;
+    margin-top: 70px;
+  }
+
+  &-list {
+    float: left;
+    width: 336px;
+    box-sizing: border-box;
+    padding: 5px 25px 0;
+    font-size: 18px;
+
+    &__item {
+      color: rgba($white, .5);
+      text-transform: uppercase;
+      transition: $trans;
+      margin-bottom: 45px;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 12px;
+        left: 0;
+        width: 207px;
+        top: 100%;
+        padding-top: 10px;
+        transition: $trans;
+        background: url(../images/icons/faq-item-line.png) left bottom repeat-x;
+        opacity: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active,
+      &:hover {
+        color: $yellowc4;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .fa {
+      width: 30px;
+    }
+  }
+
+  &-tab {
+
+    &s__sections {
+      margin-left: 336px;
+      position: relative;
+      font-size: 25px;
+      margin-right: 90px;
+
+      @media #{$desk1440} {
+        margin-right: 20px;
+      }
+
+      .faq-tab__title:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &__title {
+      color: $yellowd5;
+      margin: 45px 0 20px;
+    }
+
+    &__text {
+      line-height: 1.2;
+    }
+  }
+}
+
+
 .winners {
 	&-section {
-		background: url(../images/winners-bg.jpg) center top repeat-x;
+		background: url(../images/bg/winners-bg.jpg) center top;
     padding: 45px 0;
-		margin-top: -8px;
-		position: relative;
 		
-		&:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			right: 0;
-			display: block;
-			height: 7px;
-			background-image: url(../images/icons/winners-bg-icon.png);
-			background-repeat: repeat-x;
-			bottom: 100%;
-		}
+		&.fangs-line {
+      &:before {
+        background-position: center -54px;
+      }
+    }
 	}
 	
 	&-inner {
@@ -81,19 +172,12 @@
 	&-section {
 		padding: 45px 0 70px;
 		background: $yellowd8;
-		position: relative;
 		
-		&:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			right: 0;
-			display: block;
-			height: 8px;
-			background-image: url(../images/icons/sign-up-bg.png);
-			background-repeat: repeat-x;
-			bottom: 100%;
-		}
+		&.fangs-line {
+      &:before {
+        background-position: center -63px;
+      }
+    }
 	}
 	
 	&-title,

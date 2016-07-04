@@ -64,8 +64,9 @@
 			}
 		}
 		
-		&-large {
-			
+		&__large {
+			font-size: 25px;
+			padding: 14px 18px;
 		}
 		
 		&:hover {
@@ -104,7 +105,7 @@
 			}
 		}
 		
-		&-gray {
+		&__gray {
 			background: $gray1d;
 			color: $yellowd5;
 			

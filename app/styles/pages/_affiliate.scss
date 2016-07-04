@@ -1,21 +1,14 @@
 .autho-section {
-  background: url(../images/authorization.png) center top;
+  background: url(../images/bg/authorization-bg.jpg) center top;
   padding-top: 78px;
   padding-bottom: 115px;
-  position: relative;
-  z-index: 1;
-
-  &.line-bottom {
-    &:after {
-      background-image: url(../images/authorization-line.png);
-    }
-  }
 
   &__title {
     font-size: 60px;
     color: $blue01;
     background-color: $yellowd8;
     display: inline-block;
+    padding: 24px 35px 26px 100px;
     padding: 24px 35px 26px 100px;
     text-transform: uppercase;
   }
@@ -107,13 +100,12 @@
 }
 
 .quote-section {
-  background: url(../images/quote.png) center top;
+  background: url(../images/bg/quote-bg.jpg) center top;
   padding: 45px 0;
 
-  &.line-bottom {
-
-    &:after {
-      background-image: url(../images/quote-line.png);
+  &.fangs-line {
+    &:before {
+      background-position: center -45px;
     }
   }
 
@@ -147,13 +139,13 @@
 .service {
 
   &-section {
-    background: url(../images/service.png) center top;
+    background: url(../images/bg/service-bg.jpg) center top;
     padding: 30px 0 60px;
 
-    &.line-top {
+    &.fangs-line {
       
       &:before {
-        background-image: url(../images/service-line.png);
+        background-position: center -36px;
       }
     }
   }
@@ -264,7 +256,7 @@
 .commiss {
 
   &-section {
-    background: url(../images/commission.png) center top;
+    background: url(../images/bg/commission-bg.jpg) center top;
     color: $pinkff;
     padding: 70px 0 50px;
 
@@ -276,10 +268,10 @@
       }
     }
 
-    &.line-top {
+    &.fangs-line {
       
       &:before {
-        background-image: url(../images/commission-line.png);
+        background-position: center -27px;
       }
     }
   }
@@ -445,110 +437,10 @@
   }
 }
 
-.faq {
-
-  &-section {
-    background: url(../images/faq.png) center top;
-    color: $white;
-    padding: 77px 0 110px;
-
-    &.line-top {
-      
-      &:before {
-        background-image: url(../images/faq-line.png);
-      }
-    }
-  }
-
-  &-title {
-    font-size: 50px;
-    text-transform: uppercase;
-    padding-left: 335px;
-  }
-
-  &-body {
-    @extend %clearfix;
-    margin-top: 70px;
-  }
-
-  &-list {
-    float: left;
-    width: 336px;
-    box-sizing: border-box;
-    padding: 5px 25px 0;
-    font-size: 18px;
-
-    &__item {
-      color: rgba($white, .5);
-      text-transform: uppercase;
-      transition: $trans;
-      margin-bottom: 45px;
-      cursor: pointer;
-      position: relative;
-
-      &:after {
-        content: '';
-        position: absolute;
-        height: 12px;
-        left: 0;
-        width: 207px;
-        top: 100%;
-        padding-top: 10px;
-        transition: $trans;
-        background: url(../images/icons/faq-item-line.png) left bottom repeat-x;
-        opacity: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &.active,
-      &:hover {
-        color: $yellowc4;
-        &:after {
-          opacity: 1;
-        }
-      }
-    }
-
-    .fa {
-      width: 30px;
-    }
-  }
-
-  &-tab {
-
-    &s__sections {
-      margin-left: 336px;
-      position: relative;
-      font-size: 25px;
-      margin-right: 90px;
-
-      @media #{$desk1440} {
-        margin-right: 20px;
-      }
-
-      .faq-tab__title:first-of-type {
-        margin-top: 0;
-      }
-    }
-
-    &__title {
-      color: $yellowd5;
-      margin: 45px 0 20px;
-    }
-
-    &__text {
-      line-height: 1.2;
-    }
-  }
-}
-
 .contacts {
 
   &-section {
-    background: url(../images/contacts.png) center top;
+    background: url(../images/bg/contacts-bg.jpg) center top;
     padding: 70px 0 25px;
     color: $blue18;
 
@@ -560,10 +452,10 @@
       }
     }
 
-    &.line-top {
+    &.fangs-line {
       
       &:before {
-        background-image: url(../images/contacts-line.png);
+        background-position: center -9px;
       }
     }
   }

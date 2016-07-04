@@ -1,7 +1,7 @@
 .settings {
 
   &-section {
-    background: url(../images/settings.png) center top;
+    background: url(../images/bg/settings-bg.jpg) center top;
     height: 720px;
 
     .main-container {
@@ -11,7 +11,7 @@
 
   &-sb {
     width: 335px;
-    background: url(../images/settings-sb.png) center top;
+    background: url(../images/bg/settings-sidebar-bg.jpg) center top;
     height: 100%;
 
     &__title {

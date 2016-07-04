@@ -1,0 +1,178 @@
+.btn {
+	display: inline-block;
+	
+	&-tape {
+		position: relative;
+		color: $gray1d;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: $yellowd5;
+    padding: 9px 19px;
+    margin: 0 10px;
+    text-decoration: none;
+		text-align: center;
+		
+		&__mark {
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				border: solid transparent;
+				border-width: 9px;
+				border-left-width: 5px;
+				border-right-width: 5px;
+			}
+			
+			&:before {
+				top: 0;	
+			}
+			
+			&:after {
+				bottom: 0;
+			}
+		}
+		
+		&__left {
+			&:before,
+			&:after {
+				right: 100%;
+				border-right-color: $yellowd5;
+			}
+			
+			&:before {
+				border-top-color: $yellowd5;
+			}
+			
+			&:after {
+				border-bottom-color: $yellowd5;
+			}
+		}
+
+		&__right {
+			&:before,
+			&:after {
+				left: 100%;
+				border-left-color: $yellowd5;
+			}
+			
+			&:before {
+				border-top-color: $yellowd5;
+			}
+			
+			&:after {
+				border-bottom-color: $yellowd5;
+			}
+		}
+		
+		&-large {
+			
+		}
+		
+		&:hover {
+			background: $gray1d;
+			color: $yellowd5;
+			
+			.btn-tape__left {
+				&:before,
+				&:after {
+					border-right-color: $gray1d;
+				}
+
+				&:before {
+					border-top-color: $gray1d;
+				}
+
+				&:after {
+					border-bottom-color: $gray1d;
+				}
+			}
+
+			.btn-tape__right {
+				&:before,
+				&:after {
+					left: 100%;
+					border-left-color: $gray1d;
+				}
+
+				&:before {
+					border-top-color: $gray1d;
+				}
+
+				&:after {
+					border-bottom-color: $gray1d;
+				}
+			}
+		}
+		
+		&-gray {
+			background: $gray1d;
+			color: $yellowd5;
+			
+			.btn-tape__left {
+				&:before,
+				&:after {
+					border-right-color: $gray1d;
+				}
+
+				&:before {
+					border-top-color: $gray1d;
+				}
+
+				&:after {
+					border-bottom-color: $gray1d;
+				}
+			}
+
+			.btn-tape__right {
+				&:before,
+				&:after {
+					border-left-color: $gray1d;
+				}
+
+				&:before {
+					border-top-color: $gray1d;
+				}
+
+				&:after {
+					border-bottom-color: $gray1d;
+				}
+			}
+			
+		&:hover {
+			background: $yellowd5;
+			color: $gray1d;
+			
+			.btn-tape__left {
+				&:before,
+				&:after {
+					border-right-color: $yellowd5;
+				}
+
+				&:before {
+					border-top-color: $yellowd5;
+				}
+
+				&:after {
+					border-bottom-color: $yellowd5;
+				}
+			}
+
+			.btn-tape__right {
+				&:before,
+				&:after {
+					border-left-color: $yellowd5;
+				}
+
+				&:before {
+					border-top-color: $yellowd5;
+				}
+
+				&:after {
+					border-bottom-color: $yellowd5;
+				}
+			}
+		}
+			
+		}
+	}
+}

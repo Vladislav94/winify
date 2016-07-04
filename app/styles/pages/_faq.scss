@@ -1,8 +1,170 @@
 .winners {
 	&-section {
 		height: 400px;
-		background: url(../images/quote.png) center top repeat-x;
-    margin-top: 8px;
-    padding: 45px 0;
+		background: url(../images/winners-bg.jpg) center top repeat-x;
+    padding: 45px 0 100px;
+		margin-top: -8px;
+		position: relative;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: block;
+			height: 7px;
+			background-image: url(../images/icons/winners-bg-icon.png);
+			background-repeat: repeat-x;
+			bottom: 100%;
+		}
+	}
+	
+	&-inner {
+		 @extend %clearfix;
+	}
+	
+	&-list {
+		width: 50%;
+		float: left;
+		
+		&__left {
+			padding-right: 10px;
+			.title {
+				color: $yellowd8;
+				border-bottom-color: $yellowd8;
+			}
+			
+			.winners-list__item {
+				background: rgba($yellowd8, .5);
+			}
+		}
+		
+		&__right {
+			padding-left: 10px;
+			.title {
+				color: #f364c3;
+				border-bottom-color: #f364c3;
+			}
+			
+			.winners-list__item {
+				background: rgba(#f364c3, .5);
+			}
+		}
+		
+		.title {
+			font-size: 22px;
+			border-bottom: 2px solid;
+			padding-bottom: 25px;
+			margin-bottom: 35px;
+		}
+		
+		&__item {
+			display: table;
+			width: 100%;
+			color: $white;
+			margin-bottom: 15px;
+		}
+		
+		&__image,
+		&__description {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 10px;
+		}
+		
+		&__image {
+			width: 110px;
+		}
+	}
+}
+
+.sign-up {
+	&-section {
+		padding: 45px 0 70px;
+		background: $yellowd8;
+		position: relative;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: block;
+			height: 8px;
+			background-image: url(../images/icons/sign-up-bg.png);
+			background-repeat: repeat-x;
+			bottom: 100%;
+		}
+	}
+	
+	&-title,
+	&-marks,
+	&-button {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	&-title {
+		font-size: 40px;
+		color: #383838;
+		
+		span {
+			font-size: 70px;
+		}
+	}
+	
+	&-marks {
+		position: relative;
+		width: 200px;
+		margin: 0 10px;
+		height: 90px;
+		
+		span {
+			font-size: 61px;
+			color: #383838;
+			position: absolute;
+			cursor: default;
+		}
+
+		&__1 {
+			top: -25px;
+			left: 10px;
+			transform: rotate(-25deg);
+		}
+		&__2 {
+			top: -15px;
+			left: 75px;
+			transform: rotate(-10deg);
+		}
+		&__3 {
+			top: -30px;
+			left: 135px;
+			transform: rotate(25deg);
+		}
+		&__4 {
+			top: 50px;
+			left: 25px;
+			transform: rotate(25deg);
+		}
+		&__5 {
+			top: 45px;
+			left: 70px;
+			transform: rotate(-25deg);
+		}
+		&__6 {
+			top: 65px;
+			left: 115px;
+			transform: rotate(20deg);
+		}
+		&__7 {
+			top: 40px;
+			left: 155px;
+			transform: rotate(-25deg);
+		}
+	}
+	
+	&-button {
+		width: 300px;
+		text-align: center;
 	}
 }

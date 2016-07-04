@@ -33,6 +33,12 @@
     width: 345px;
     box-sizing: border-box;
     position: relative;
+		
+		.btn {
+			display: block;
+			margin-bottom: 22px;
+			margin-top: 22px;
+		}
 
     &:before,
     &:after {
@@ -254,7 +260,6 @@
 }
 
 .commiss {
-
   &-section {
     background: url(../images/bg/commission-bg.jpg) center top;
     color: $pinkff;
@@ -422,23 +427,15 @@
     padding-top: 18px;
   }
 
-  &-link {
-    color: $pink93;
-    font-size: 25px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: $pinkff;
-    padding: 17px 10px;
-    display: block;
-    margin: 0 auto;
-    width: 260px;
-    box-sizing: border-box;
-    text-align: center;
-  }
+	&-button {
+		text-align: center;
+		.btn {
+			width: 280px;
+		}
+	}
 }
 
 .contacts {
-
   &-section {
     background: url(../images/bg/contacts-bg.jpg) center top;
     padding: 70px 0 25px;

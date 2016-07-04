@@ -1,5 +1,7 @@
 .btn {
 	display: inline-block;
+	outline: none;
+	transition: all 0.3s linear;
 	
 	&-tape {
 		position: relative;
@@ -12,6 +14,10 @@
     text-decoration: none;
 		text-align: center;
 		
+		&:hover {
+			opacity: .7;
+		}
+		
 		&__mark {
 			&:before,
 			&:after {
@@ -21,6 +27,7 @@
 				border-width: 9px;
 				border-left-width: 5px;
 				border-right-width: 5px;
+				transition: all 0.3s linear;
 			}
 			
 			&:before {
@@ -66,48 +73,107 @@
 		
 		&__large {
 			font-size: 25px;
-			padding: 14px 18px;
-		}
-		
-		&:hover {
-			background: $gray1d;
-			color: $yellowd5;
+			padding: 17px 25px;
+			margin: 0 15px;
 			
-			.btn-tape__left {
+			.btn-tape__mark {
 				&:before,
 				&:after {
-					border-right-color: $gray1d;
-				}
-
-				&:before {
-					border-top-color: $gray1d;
-				}
-
-				&:after {
-					border-bottom-color: $gray1d;
+					border-width: 15px;
+					border-left-width: 8px;
+					border-right-width: 8px;
 				}
 			}
+		}
+		
+		&__border {
+			box-shadow: 0 0 0 3px $yellowd5;
+			color: $yellowd5;
+			background: $violet16;
+			padding: 15px 25px;
+			margin: 0 20px;
+				
+			&:hover {
 
-			.btn-tape__right {
+			}
+			
+			.btn-tape__mark {
 				&:before,
 				&:after {
-					left: 100%;
-					border-left-color: $gray1d;
+					border-width: 20px;
+					border-left-width: 10px;
+					border-right-width: 10px;
 				}
-
+				
 				&:before {
-					border-top-color: $gray1d;
+					top: -3px;	
 				}
 
 				&:after {
-					border-bottom-color: $gray1d;
+					bottom: -3px;
 				}
+				
+				&.border-left,
+				&.border-right {
+					&:before,
+					&:after {
+						content: '';
+						position: absolute;
+						border: solid transparent;
+						border-width: 14px;
+						border-left-width: 7px;
+						border-right-width: 7px;
+						transition: all 0.3s linear;
+						z-index: 5;
+					}
+
+					&:before {
+						top: 0;	
+					}
+
+					&:after {
+						bottom: 0;
+					}
+				}
+				
+		&.border-left {
+			&:before,
+			&:after {
+				right: 100%;
+				border-right-color: $violet16;
+			}
+			
+			&:before {
+				border-top-color: $violet16;
+			}
+			
+			&:after {
+				border-bottom-color: $violet16;
+			}
+		}
+
+		&.border-right {
+			&:before,
+			&:after {
+				left: 100%;
+				border-left-color: $violet16;
+			}
+			
+			&:before {
+				border-top-color: $violet16;
+			}
+			
+			&:after {
+				border-bottom-color: $violet16;
+			}
+		}
 			}
 		}
 		
 		&__gray {
 			background: $gray1d;
 			color: $yellowd5;
+			opacity: .85;
 			
 			.btn-tape__left {
 				&:before,
@@ -139,41 +205,48 @@
 				}
 			}
 			
-		&:hover {
-			background: $yellowd5;
-			color: $gray1d;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		
+		&__pink {
+			background: $pinkff;
+			color: $pink93;
 			
 			.btn-tape__left {
 				&:before,
 				&:after {
-					border-right-color: $yellowd5;
+					border-right-color: $pinkff;
 				}
 
 				&:before {
-					border-top-color: $yellowd5;
+					border-top-color: $pinkff;
 				}
 
 				&:after {
-					border-bottom-color: $yellowd5;
+					border-bottom-color: $pinkff;
 				}
 			}
 
 			.btn-tape__right {
 				&:before,
 				&:after {
-					border-left-color: $yellowd5;
+					border-left-color: $pinkff;
 				}
 
 				&:before {
-					border-top-color: $yellowd5;
+					border-top-color: $pinkff;
 				}
 
 				&:after {
-					border-bottom-color: $yellowd5;
+					border-bottom-color: $pinkff;
 				}
 			}
-		}
 			
+			&:hover {
+				opacity: .85;
+			}
 		}
 	}
 }

@@ -26,6 +26,12 @@
     background-color: $violet20;
     padding: 23px 0 6px;
     position: relative;
+		z-index: 5;
+		transition: all 0.3s linear;
+		
+		&:hover {
+			opacity: .7;
+		}
 
     @media #{$desk992} {
       width: 170px;
@@ -112,17 +118,7 @@
 
   &-r {
     float: right;
-  }
-
-  &-dep {
-    display: inline-block;
-    color: $gray1d;
-    font-size: 18px;
-    text-transform: uppercase;
-    background-color: $yellowd5;
-    padding: 9px 19px;
-    margin: 20px 0;
-    text-decoration: none;
+		padding-top: 20px;
   }
 
   &-user {

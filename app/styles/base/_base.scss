@@ -29,6 +29,7 @@ body {
 .main-container {
   width: 1440px;
   margin: 0 auto;
+  position: relative;
   @extend %clearfix;
   box-sizing: border-box;
 
@@ -287,5 +288,24 @@ body {
     position: absolute;
 		background-repeat: repeat-x;
 		background-image: url(../images/icons/fangs.png);
+  }
+}
+
+
+// help block
+
+.b-help {
+  background-color: $blue2b;
+
+  &-body {
+    padding: 15px 24px 10px 35px;
+  }
+
+  &-title {
+    background-color: $yellowd5;
+    font-size: 13px;
+    color: $violet2e;
+    text-transform: uppercase;
+    font-family: $rBlack;
   }
 }

@@ -28,6 +28,7 @@ $yellowe1: #e1e92b;
 $blue01: #010963;
 $blue00: #00aeef;
 $blue18: #18154c;
+$blue2b: #2b2e78;
 
 // Green
 $green86: #86b70f;
@@ -55,7 +56,9 @@ $aBold: 'Arial-bold';
 $light: 300;
 $normal: 400;
 $medium: 500;
-$bold: 700;// Mix
+$bold: 700;
+
+// Mix
 %clearfix {
   &:after {
     content: "";

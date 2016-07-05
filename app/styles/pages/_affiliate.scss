@@ -105,40 +105,53 @@
   }
 }
 
-.quote-section {
-  background: url(../images/bg/quote-bg.jpg) center top;
-  padding: 45px 0;
+.quote {
 
-  &.fangs-line {
-    &:before {
-      background-position: center -45px;
-    }
+  &-help {
+    position: absolute;
+    right: 0;
   }
 
-  &__text {
-    font-size: 50px;
-    color: $blue00;
-    text-transform: uppercase;
-    width: 950px;
-    line-height: 1.1;
-    padding: 100px 0 0 100px;
-    position: relative;
+  &-section {
+    background: url(../images/bg/quote-bg.jpg) center top;
+    padding: 45px 0;
 
-    &:before {
-      content: '"';
-      font-size: 220px;
-      position: absolute;
-      top: 0;
-      left: 70px;
-      font-family: $aBold;
+    &.fangs-line {
+      &:before {
+        background-position: center -45px;
+      }
     }
-  }
 
-  &__name {
-    font-size: 35px;
-    color: $blue00;
-    text-align: right;
-    padding-right: 100px;
+    &__text {
+      font-size: 50px;
+      color: $blue00;
+      text-transform: uppercase;
+      width: 950px;
+      line-height: 1.15;
+      padding: 85px 0 0 100px;
+      position: relative;
+
+      &:before {
+        content: '';
+        background: url(../images/icons/quote-icon.png) no-repeat;
+        background-size: cover;
+        width: 86px;
+        height: 66px;
+        font-size: 220px;
+        position: absolute;
+        top: -5px;
+        left: 55px;
+        font-family: $aBold;
+      }
+    }
+
+    &__name {
+      font-size: 35px;
+      color: $blue00;
+      text-align: right;
+      padding-right: 100px;
+      margin-top: 20px;
+    }
   }
 }
 

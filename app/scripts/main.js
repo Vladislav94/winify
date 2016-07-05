@@ -13,6 +13,19 @@ $(document).ready(function() {
       $(this).children('.tabs-section').eq(index).addClass('active')
                      .siblings().removeClass('active');
     });
+  });
 
+  // Nav
+
+  var $navClose = $('.header-nav__close'),
+      $navOpen = $('.header-nav__open'),
+      $nav = $('.header-nav');
+
+  $navClose.on('click', function() {
+    $nav.fadeOut();
+  });
+
+  $navOpen.on('click', function() {
+    $nav.fadeIn();
   });
 });

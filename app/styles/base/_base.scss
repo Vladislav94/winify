@@ -63,6 +63,20 @@ body {
   }
 }
 
+input {
+  &::-webkit-input-placeholder {transition: $trans}
+  &::-moz-placeholder          {transition: $trans}
+  &:-moz-placeholder           {transition: $trans}
+  &:-ms-input-placeholder      {transition: $trans}
+
+  &:focus {
+    &::-webkit-input-placeholder {opacity: 0}
+    &::-moz-placeholder          {opacity: 0}
+    &:-moz-placeholder           {opacity: 0}
+    &:-ms-input-placeholder      {opacity: 0}
+  }
+}
+
 .textarea {
 }
 

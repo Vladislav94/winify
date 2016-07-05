@@ -1,6 +1,14 @@
 .header {
   background-color: $violet2e;
 
+  &-xs {
+    display: none;
+
+    @media #{$desk992} {
+      display: block;
+    }
+  }
+
   &-inner {
     width: 1440px;
     margin: 0 auto;
@@ -66,6 +74,12 @@
   &-box {
     padding-left: 183px;
     position: relative;
+
+    @extend %clearfix;
+
+    @media #{$desk992} {
+      padding-right: 20px;
+    }
   }
 
   &-nav {
@@ -73,8 +87,83 @@
 
     @media #{$desk992} {
       position: absolute;
-      top: 100%;
-      background-color: red;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      width: 240px;
+      padding: 85px 25px 20px 30px;
+      background-color: $blue1b;
+      display: none;
+
+      &:before {
+        content: '';
+        background: url(../images/icons/nav-mob-border.png) repeat-y;
+        right: 100%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        position: absolute;
+      }
+    }
+
+    &__close {
+      display: none;
+      position: absolute;
+      font-size: 37px;
+      right: 20px;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      background: url(../images/icons/nav-close.png) no-repeat center;
+      color: $white;
+      font-family: $roboto;
+      font-weight: $light;
+
+      @media #{$desk992} {
+        display: block;
+      }
+    }
+
+    &__open {
+      display: none;
+      padding: 0;
+      width: 36px;
+      background: none;
+      border: none;
+      height: 30px;
+      margin-top: 20px;
+      margin-left: 20px;
+      outline: none;
+
+      .line {
+        display: block;
+        width: 100%;
+        height: 4px;
+        position: relative;
+        background-color: $grayed;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          background-color: $grayed;
+          width: 100%;
+          height: 4px;
+          left: 0;
+        }
+
+        &:before {
+          top: -10px;
+        }
+
+        &:after {
+          bottom: -10px;
+        }
+      }
+
+      @media #{$desk992} {
+        display: block;
+      }
     }
   }
 
@@ -83,9 +172,25 @@
     padding-left: 15px;
     float: left;
 
+    @media #{$desk992} {
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
     &__item {
       float: left;
       color: $white;
+
+      @media #{$desk992} {
+        float: none;
+        margin: 10px 0;
+      }
+
+      &.hidden-xs {
+        @media #{$desk992} {
+          display: none;
+        }
+      }
 
       &:hover {
         color: $yellowbb;
@@ -103,6 +208,11 @@
       @media #{$desk1250} {
         padding: 31px 10px;
       }
+
+      @media #{$desk992} {
+        padding: 22px 0;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -111,27 +221,59 @@
     padding: 22px 0;
     margin-left: 15px;
 
+    &__icon {
+      width: 35px;
+      height: 35px;
+      display: block;
+
+      @media #{$desk992} {
+        width: 42px;
+        height: 42px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     @media #{$desk1250} {
       margin-left: 10px;
+    }
+
+    @media #{$desk992} {
+      position: absolute;
+      left: 30px;
+      top: 13px;
+      margin: 0;
+      padding: 0;
     }
   }
 
   &-r {
     float: right;
 		padding-top: 20px;
+
+    @media #{$desk992} {
+      display: none;
+    }
   }
 
   &-user {
     margin-left: 39px;
     margin-right: 9px;
-    margin-top: 5px;
     font-size: 18px;
     vertical-align: middle;
     float: right;
-    padding: 14px 0;
+    padding: 19px 0;
 
     @media #{$desk1250} {
       margin-left: 29px;
+    }
+
+    @media #{$desk992} {
+      padding: 15px 0;
     }
 
     &__name {
@@ -154,6 +296,64 @@
       color: $white;
       margin-top: 5px;
       display: inline-block;
+    }
+  }
+
+  &-sign {
+    padding: 10px 19px;
+    display: block;
+  }
+
+  &-search {
+    border: 2px solid $white;
+    position: relative;
+    margin-top: 30px;
+    box-shadow: inset 0 0 0 1px $grayd7;
+    display: none;
+
+    @media #{$desk992} {
+      display: block;
+    }
+
+    &__input {
+      display: block;
+      background: none;
+      font-size: 18px;
+      color: $white;
+      padding: 7px 50px 8px 15px;
+      border: none;
+      width: 100%;
+      outline: none;
+
+      &::-webkit-input-placeholder {color:$white;}
+      &::-moz-placeholder          {color:$white;}
+      &:-moz-placeholder           {color:$white;}
+      &:-ms-input-placeholder      {color:$white;}
+    }
+
+    &__btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 37px;
+      display: block;
+      border: none;
+      border-radius: 0;
+      background: $white;
+      font-size: 20px;
+      color: $blue16;
+      outline: none;
+
+      &:before {
+        content: '';
+        width: 11px;
+        height: 100%;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        background: url(../images/icons/search-btn-border.png) no-repeat;
+      }
     }
   }
 }

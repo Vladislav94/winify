@@ -222,13 +222,78 @@
 
   &-lang {
     float: left;
-    padding: 22px 0;
-    margin-left: 15px;
+    padding: 22px 15px 25px;
+
+    &.dropdown-open {
+      background-color: $blue1b;
+
+      &:before {
+        content: '';
+        background: url(../images/icons/nav-mob-border.png) repeat-y;
+        right: 100%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        position: absolute;
+
+        @media #{$desk992} {
+          content: none;
+        }
+      }
+    }
+
+    &__dd {
+      width: 260px;
+      padding: 12px 15px;
+      background-color: $blue1b;
+      left: 0;
+
+      .header-lang__icon {
+        float: left;
+        margin: 5px 15px 5px 0;
+
+        &:nth-of-type(5n) {
+          margin-right: 0;
+        }
+
+        @media #{$desk992} {
+          margin-right: 14px;
+
+          &:nth-of-type(5n) {
+            margin-right: 14px;
+          }
+
+          &:nth-of-type(4n) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &:before {
+        content: '';
+        background: url(../images/icons/nav-mob-border.png) repeat-y;
+        right: 100%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        position: absolute;
+      }
+
+      @media #{$desk992} {
+        width: 240px;
+        left: -30px;
+
+        &:before {
+          background-position: 0 -3px;
+        }
+      }
+    }
 
     &__icon {
       display: block;
       font-size: 34px;
       border-radius: 50%;
+      cursor: pointer;
 
       @media #{$desk992} {
         font-size: 42px;
@@ -236,7 +301,8 @@
     }
 
     @media #{$desk1250} {
-      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     @media #{$desk992} {

@@ -341,5 +341,5 @@ input {
   visibility: hidden;
   opacity: 0;
   z-index: 10;
-  transition: visibility, opacity .5s, linear;
+  transition: $trans;
 }

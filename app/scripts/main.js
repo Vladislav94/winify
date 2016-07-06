@@ -48,7 +48,7 @@ $(document).ready(function() {
   $('body').on('click', function(e){
     var target = e.target;
     if ($(target) != $('.dropdown-wrap') && target.closest('.dropdown-wrap') == null) {
-      $('.dropdown-wrap').removeClass('dropdown-open');
+      $('.dropdown-wrap.dropdown-open').removeClass('dropdown-open');
     };
   });
 });

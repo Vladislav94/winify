@@ -338,13 +338,8 @@ input {
 .dropdown {
   position: absolute;
   top: 100%;
-  background-color: #fff;
-  border-radius: 2px;
-  border: 2px solid $darkColor;
-  margin-top: 7px;
   visibility: hidden;
   opacity: 0;
   z-index: 10;
-  box-sizing: border-box;
   transition: visibility, opacity .5s, linear;
 }

@@ -177,7 +177,8 @@
 
     @media #{$desk992} {
       padding-left: 0;
-      margin-top: 10px;
+      margin-top: 20px;
+      float: none;
     }
 
     &__item {

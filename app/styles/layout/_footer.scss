@@ -1,5 +1,5 @@
 .footer {
-	background: url(../images/bg/footer-bg.jpg) center top repeat-x;
+	background: url(../images/bg/footer-bg.jpg) center top;
 	padding: 45px 0;
 	margin-top: -2px;
 	
@@ -11,6 +11,10 @@
 
 	.main-container {
 		padding: 0 95px;
+		
+		@media #{$desk1250} {
+			padding: 0 20px;
+		}
 	}
 	
 	&-partners {
@@ -41,6 +45,14 @@
 				margin: 0 10px;
 			}
 		}
+		
+		@media #{$desk992} {
+			display: block;
+			
+			&__item {
+				display: inline-block;
+			}
+		}
 	}
 	
 	&-inner {
@@ -56,7 +68,24 @@
 		display: flex; 
 		
 		float: left;
-		width: 65%;
+		width: 70%;
+		
+		@media #{$desk992} {
+			width: 100%;
+			float: none;
+		}
+		@media #{$mobile768} {
+			display: block;
+
+			h4 {
+				text-align: center;
+			}
+
+			ul {
+				margin-bottom: 35px;
+				text-align: center
+			}
+		}
 		
 		&__list {
 			flex: 1 auto;
@@ -83,21 +112,62 @@
 				text-decoration: none;
 				border-bottom: 1px solid transparent;
 				transition: all, 0.4s, linear;
+				opacity: .7;
 				
 				&:hover {
 					border-bottom-color: $yellowd8;
+					opacity: 1;
 				}
 			}
 		}
 	}
 	
 	&-social {
-		padding: 25px 90px;
+		padding: 25px 70px;
 		text-align: center;
 		float: right;
-		width: 35%;
+		width: 30%;
 		background: rgba(#1a1823, .75);
+		position: relative;
 		
+		@media #{$desk1440} {
+			padding: 25px 50px;
+		}
+		@media #{$desk1250} {
+			padding: 25px 30px;
+		}
+		@media #{$desk992} {
+			width: 50%;
+			float: none;
+			margin: 15px auto 0;
+			padding: 25px 50px;
+		}
+		@media #{$mobile768} {
+			width: 100%;
+			padding: 20px;
+		}
+		
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 7px;
+      background-image: url(../images/icons/footer-social-tape.png);
+			opacity: .75;
+    }
+
+    &:before {
+      bottom: 100%;
+    }
+
+    &:after {
+      top: 100%;
+      background-position: 0 -10px;
+    }
+	
 		h5 {
 			font-size: 15px;
 			color: $yellowd8;
@@ -124,6 +194,10 @@
 		text-align: center;
 		padding: 130px 0 20px;
 		
+		@media #{$desk992} {
+			padding: 60px 0 10px;
+		}
+	
 		a {
 			transition: all, 0.3s, linear;
 			

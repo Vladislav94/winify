@@ -21,10 +21,6 @@ body {
   }
 }
 
-// Btns
-.btn {
-}
-
 // Main container
 .main-container {
   width: 1440px;
@@ -43,8 +39,12 @@ body {
 
   @media #{$desk992} {
     width: 768px;
-    padding: 0 10px;
+    padding: 0 20px;
   }
+
+	@media #{$mobile768} {
+		width: 100%;
+	}
 }
 
 .triangle-line {

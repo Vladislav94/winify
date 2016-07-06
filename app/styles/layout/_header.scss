@@ -25,6 +25,9 @@
     @media #{$desk992} {
       width: 768px;
     }
+		@media #{$mobile768} {
+			width: 100%;
+		}
   }
 
   &-logo {
@@ -275,6 +278,10 @@
     @media #{$desk992} {
       padding: 15px 0;
     }
+
+@media #{$mobile768} {
+	display: none;
+}
 
     &__name {
       color: $yellowd8;

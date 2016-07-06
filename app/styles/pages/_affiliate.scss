@@ -2,6 +2,14 @@
   background: url(../images/bg/authorization-bg.jpg) center top;
   padding-top: 78px;
   padding-bottom: 115px;
+	
+	@media #{$desk992} {
+		padding-top: 50px;
+		padding-bottom: 90px;
+	}
+	@media #{$mobile768} {
+		padding-bottom: 50px;
+	}
 
   &__title {
     font-size: 60px;
@@ -9,8 +17,41 @@
     background-color: $yellowd8;
     display: inline-block;
     padding: 24px 35px 26px 100px;
-    padding: 24px 35px 26px 100px;
     text-transform: uppercase;
+		position: relative;
+		
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			border: 15px solid transparent;
+			border-top-width: 30px;
+			border-bottom-width: 30px;
+			border-left-color: $yellowd8;
+		}
+		
+		&:before {
+			top: 0;
+			border-top-color: $yellowd8;
+		}
+		
+		&:after {
+			bottom: 0;
+			border-bottom-color: $yellowd8;
+		}
+		
+		@media #{$desk1250} {
+			padding-left: 50px;
+			font-size: 50px;
+		}
+		@media #{$desk992} {
+			padding: 18px 25px 20px 30px;
+			font-size: 35px;
+		}
+		@media #{$mobile768} {
+			margin-right: 30px;
+		}
   }
 
   &__text {
@@ -23,16 +64,44 @@
     span {
       font-size: 132px;
     }
+		
+		@media #{$desk1250} {
+			padding-left: 60px;
+		}
+		@media #{$desk992} {
+			padding-left: 35px;
+			font-size: 40px;
+
+			span {
+				font-size: 80px;
+			}
+		}
+		@media #{$mobile768} {
+			padding-left: 0;
+		}
   }
 
   &__box {
     float: right;
     margin: 120px-75px 70px 0 0;
     background-color: rgba($violet16, .8);
-    padding: 40px 30px 25px 25px;
+    padding: 40px 30px 25px;
     width: 345px;
     box-sizing: border-box;
     position: relative;
+		
+		@media #{$desk1250} {
+			margin-right: 0;
+		}
+		@media #{$desk992} {
+			width: 300px;
+			margin-top: 0;
+			padding: 30px 15px 15px;
+		}
+		@media #{$mobile768} {
+			width: 100%;
+			margin-bottom: 35px;
+		}
 		
 		.btn {
 			display: block;
@@ -110,11 +179,16 @@
   &-help {
     position: absolute;
     right: 0;
+		display: none;
   }
 
   &-section {
     background: url(../images/bg/quote-bg.jpg) center top;
     padding: 45px 0;
+		
+		@media #{$mobile768} {
+			padding: 95px 0 35px;
+		}
 
     &.fangs-line {
       &:before {
@@ -143,6 +217,20 @@
         left: 55px;
         font-family: $aBold;
       }
+
+			@media #{$desk992} {
+				width: 100%;
+			}
+	
+			@media #{$mobile768} {
+				padding: 30px 0 0;
+				word-break: break-word;
+				
+				&:before {
+					top: -60px;
+					left: 0;
+				}
+			}
     }
 
     &__name {
@@ -151,12 +239,15 @@
       text-align: right;
       padding-right: 100px;
       margin-top: 20px;
+			
+			@media #{$mobile768} {
+				padding-right: 0;
+			}
     }
   }
 }
 
 .service {
-
   &-section {
     background: url(../images/bg/service-bg.jpg) center top;
     padding: 30px 0 60px;
@@ -199,6 +290,11 @@
       &.dark-text {
         color: $gray20;
       }
+			
+			@media #{$mobile768} {
+				width: 240px;
+				height: 240px;
+			}
     }
 
     &__item {
@@ -260,6 +356,11 @@
           clear: left;
         }
       }
+
+			@media #{$mobile768} {
+				width: 100%;
+				margin: 15px 0;
+			}
     }
 
     &__text {
@@ -277,6 +378,10 @@
     background: url(../images/bg/commission-bg.jpg) center top;
     color: $pinkff;
     padding: 70px 0 50px;
+		
+		@media #{$mobile768} {
+			padding: 25px 0 35px;
+		}
 
     .main-container {
       padding: 0 95px;
@@ -284,6 +389,9 @@
       @media #{$desk1440} {
         padding: 0;
       }
+			@media #{$mobile768} {
+				padding: 0 20px;
+			}
     }
 
     &.fangs-line {
@@ -297,6 +405,14 @@
   &-title {
     font-size: 50px;
     text-transform: uppercase;
+		
+		@media #{$desk992} {
+			padding: 0 20px;
+		}
+		@media #{$mobile768} {
+			padding: 0;
+			font-size: 40px;
+		}
   }
 
   &-text {
@@ -304,6 +420,14 @@
     margin-top: 20px;
     text-transform: uppercase;
     line-height: 1.2;
+		
+		@media #{$desk992} {
+			padding: 0 20px;
+		}
+		@media #{$mobile768} {
+			padding: 0;
+			font-size: 30px;
+		}
   }
 
   &-list {
@@ -318,6 +442,10 @@
       margin: 35px 80px;
     }
 
+		@media #{$mobile768} {
+			margin: 35px 0 0;
+		}
+
     &__item {
       float: left;
       width: 288px;
@@ -330,7 +458,6 @@
       }
 
       @media #{$desk1250} {
-
         &:nth-child(4n) {
           margin-right: 32px;
         }
@@ -341,7 +468,6 @@
       }
 
       @media #{$desk992} {
-
         &:nth-child(3n) {
           margin-right: 32px;
         }
@@ -350,6 +476,11 @@
           margin-right: 0;
         }
       }
+
+			@media #{$mobile768} {
+				margin: 20px auto 0 !important;
+				float: none;
+			}
 
       &.pink {
         background-color: $pinkc8;
@@ -409,6 +540,11 @@
       text-align: center;
       color: inherit;
       margin-top: 40px;
+			
+			@media #{$mobile768} {
+				margin-top: 0;
+				padding-top: 35px;
+			}
     }
 
     &__footer {
@@ -445,6 +581,15 @@
 		.btn {
 			width: 280px;
 		}
+		
+		@media #{$mobile768} {
+			margin-top: 35px;
+			
+			.btn {
+				width: auto;
+				display: block;
+			}
+		}
 	}
 }
 
@@ -453,6 +598,10 @@
     background: url(../images/bg/contacts-bg.jpg) center top;
     padding: 70px 0 25px;
     color: $blue18;
+		
+		@media #{$mobile768} {
+			padding: 25px 0 35px;
+		}
 
     .main-container {
       padding: 0 60px;
@@ -480,6 +629,10 @@
     margin-top: 25px;
     line-height: 1.2;
     text-transform: uppercase;
+		
+		@media #{$mobile768} {
+			word-break: break-word;
+		}
   }
 
   &-list {
@@ -505,6 +658,10 @@
         margin-right: 0;
         float: left;
       }
+
+			@media #{$mobile768} {
+				margin: 15px 0;
+			}
 
       &.pink {
         .contacts-list__text {

@@ -225,19 +225,12 @@
     margin-left: 15px;
 
     &__icon {
-      width: 35px;
-      height: 35px;
       display: block;
+      font-size: 34px;
+      border-radius: 50%;
 
       @media #{$desk992} {
-        width: 42px;
-        height: 42px;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
+        font-size: 42px;
       }
     }
 

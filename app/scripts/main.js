@@ -28,4 +28,27 @@ $(document).ready(function() {
   $navOpen.on('click', function() {
     $nav.fadeIn();
   });
+
+  // Dropdown
+  var $dropdownBtn = $('.dropdown-show'),
+      $dropdownWrap = $('.dropdown-wrap');
+
+  $dropdownBtn.on('click', function(e){
+    var dataDD = $(this).data('dropdown'),
+        $thisWrap = $(this).closest('.dropdown-wrap');
+    if (dataDD != undefined) {
+      $('.'+dataDD).addClass('dropdown-open');
+      $thisWrap.removeClass('dropdown-open');
+      return false;
+    };
+    $('.dropdown-wrap.dropdown-open').not($thisWrap).removeClass('dropdown-open');
+    $thisWrap.toggleClass('dropdown-open');
+  });
+
+  $('body').on('click', function(e){
+    var target = e.target;
+    if ($(target) != $('.dropdown-wrap') && target.closest('.dropdown-wrap') == null) {
+      $('.dropdown-wrap').removeClass('dropdown-open');
+    };
+  });
 });

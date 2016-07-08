@@ -115,15 +115,16 @@
     &__close {
       display: none;
       position: absolute;
-      font-size: 37px;
+      font-size: 25px;
       right: 20px;
       top: 15px;
-      width: 20px;
-      height: 20px;
-      background: url(../images/icons/nav-close.png) no-repeat center;
-      color: $white;
-      font-family: $roboto;
-      font-weight: $light;
+      color: #f1f1f1;
+			cursor: pointer;
+			transition: all, 0.3s, linear;
+			
+			&:hover {
+				opacity: .85;
+			}
 
       @media #{$desk992} {
         display: block;
@@ -342,9 +343,9 @@
       padding: 15px 0;
     }
 
-@media #{$mobile768} {
-	display: none;
-}
+		@media #{$mobile768} {
+			display: none;
+		}
 
     &__name {
       color: $yellowd8;
@@ -375,55 +376,11 @@
   }
 
   &-search {
-    border: 2px solid $white;
-    position: relative;
     margin-top: 30px;
-    box-shadow: inset 0 0 0 1px $grayd7;
     display: none;
 
     @media #{$desk992} {
       display: block;
-    }
-
-    &__input {
-      display: block;
-      background: none;
-      font-size: 18px;
-      color: $white;
-      padding: 7px 50px 8px 15px;
-      border: none;
-      width: 100%;
-      outline: none;
-
-      &::-webkit-input-placeholder {color:$white;}
-      &::-moz-placeholder          {color:$white;}
-      &:-moz-placeholder           {color:$white;}
-      &:-ms-input-placeholder      {color:$white;}
-    }
-
-    &__btn {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      width: 37px;
-      display: block;
-      border: none;
-      border-radius: 0;
-      background: $white;
-      font-size: 20px;
-      color: $blue16;
-      outline: none;
-
-      &:before {
-        content: '';
-        width: 11px;
-        height: 100%;
-        position: absolute;
-        right: 100%;
-        top: 0;
-        background: url(../images/icons/search-btn-border.png) no-repeat;
-      }
     }
   }
 }

@@ -260,3 +260,88 @@
 		}
 	}
 }
+
+
+.games {
+	&-section {
+    background: url(../images/bg/games-bg.jpg) center top;
+		padding: 15px 0 60px;
+		
+		&.fangs-line {
+      &:before {
+        background-position: center -72px;
+      }
+    }
+	}
+	
+	&-body {
+		padding: 0 100px;
+	}
+	
+	&-top {
+		@extend %clearfix;
+		margin-bottom: 40px;
+	}
+	
+	&-list {
+		@extend %clearfix;
+		padding: 0 15px;
+		width: 75%;
+		float: left;
+		position: relative;
+		
+		&:before {
+			@extend .zigzag;
+			
+			content: '';
+			position: absolute;
+			width: calc(100% - 30px);
+			top: 100%;
+			left: 15px;
+			background-position: 0 -33px;
+		}
+		
+		&__item {
+			float: left;
+			font-family: $roboto;
+			font-size: 25px;
+			font-weight: $medium;
+			color: $white;
+			margin-right: 20px;
+			padding: 20px;
+			cursor: pointer;
+			
+			&.active {
+				color: $yellowbb;
+			}
+		}
+	}
+	
+	&-search {
+		padding: 0 15px;
+		width: 25%;
+		float: right;
+	}
+	
+	&-tab {
+		&__section {
+			color: $white;
+		}
+	}
+	
+	&-item {
+		width: 288px;
+		height: 214px;
+		float: left;
+		margin-right: 0;
+		margin-bottom: 15px;
+		
+		&:nth-child(4n + 4) {
+			background: red;
+			margin-right: 0;
+		}
+	}
+}
+
+
+

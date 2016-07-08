@@ -305,6 +305,22 @@ input {
   }
 }
 
+.zigzag {
+	display: block;
+	width: 100%;
+	height: 10px;
+	background-image: url(../images/icons/zigzag.png);
+	background-repeat: repeat-x;
+	
+	&-yellow {
+		background-position: 0 0;
+	}
+	
+	&-red {
+		background-position: 0 -11px;
+	}
+}
+
 
 // help block
 

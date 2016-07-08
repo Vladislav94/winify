@@ -134,6 +134,14 @@
 		background: url(../images/bg/winners-bg.jpg) center top;
     padding: 45px 0;
 		
+		@media #{$mobile768} {
+			padding: 30px 0;
+		}
+		
+		.main-container {
+			padding: 0 20px;
+		}
+		
 		&.fangs-line {
       &:before {
         background-position: center -54px;
@@ -149,11 +157,21 @@
 		width: 50%;
 		float: left;
 		
+		@media #{$mobile768} {
+			width: 100%;
+			float: none;
+		}
+		
 		&__left {
-			padding-right: 10px;
+			padding-right: 15px;
+			
+			@media #{$mobile768} {
+				padding-right: 0;
+				margin-bottom: 25px;
+			}
+			
 			.title {
 				color: $yellowd8;
-				border-bottom-color: $yellowd8;
 			}
 			
 			.winners-list__item {
@@ -162,10 +180,18 @@
 		}
 		
 		&__right {
-			padding-left: 10px;
+			padding-left: 15px;
+			
+			@media #{$mobile768} {
+				padding-left: 0;
+			}
+
 			.title {
 				color: #f364c3;
-				border-bottom-color: #f364c3;
+				
+				&:after {
+					background-position: -63px 0;
+				}
 			}
 			
 			.winners-list__item {
@@ -175,15 +201,30 @@
 		
 		.title {
 			font-size: 22px;
-			border-bottom: 2px solid;
-			padding-bottom: 25px;
 			margin-bottom: 35px;
+			position: relative;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -10px;
+				width: 63px;
+				height: 83px;
+				background-image: url(../images/icons/winners-mark.png);
+				background-repeat: no-repeat;
+			}
+		}
+		
+		.zigzag {
+			margin-top: 25px;
 		}
 		
 		&__item {
 			display: table;
 			width: 100%;
 			color: $white;
+			padding: 0 10px;
 			margin-bottom: 15px;
 		}
 		
@@ -192,6 +233,33 @@
 			display: table-cell;
 			vertical-align: middle;
 			padding: 10px;
+		}
+		
+		&__description {
+			.winner {
+				margin-bottom: 8px;
+				font-size: 14px;
+			}
+			
+			.amount {
+				font-family: $roboto;
+				font-weight: $medium;
+				float: left;
+				color: $yellowd8;
+			}
+			
+			.link {
+				float: right;
+
+				a {
+					font-size: 12px;
+					color: $white;
+					
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
 		}
 		
 		&__image {
@@ -204,6 +272,10 @@
 	&-section {
 		padding: 45px 0 70px;
 		background: $yellowd8;
+		
+		@media #{$desk992} {
+			padding: 30px 0 45px;
+		}
 		
 		&.fangs-line {
       &:before {
@@ -225,6 +297,15 @@
 		
 		span {
 			font-size: 70px;
+		}
+		
+		@media #{$desk1250} {
+			width: 520px;
+			text-align: center;
+		}
+		@media #{$mobile768} {
+			width: 100%;
+			display: block;
 		}
 	}
 	
@@ -276,6 +357,14 @@
 			left: 155px;
 			transform: rotate(-25deg);
 		}
+		
+		@media #{$desk1250} {
+			margin: 0;
+		}
+		@media #{$mobile768} {
+			display: block;
+			margin: 40px auto;
+		}
 	}
 	
 	&-button {
@@ -283,7 +372,28 @@
 		text-align: center;
 		
 		.btn {
+			display: block;
+		}
+		
+		@media #{$desk1250} {
+			width: 250px;
+		}
+		@media #{$desk992} {
 			width: 100%;
+			display: block;
+			margin-top: 30px;
+
+			.btn {
+				width: 300px;
+				margin: auto;
+			}
+		}
+		@media #{$mobile768} {
+			margin-top: 50px;
+			.btn {
+				margin: 0 15px;
+				width: auto;
+			}
 		}
 	}
 }

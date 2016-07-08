@@ -293,7 +293,7 @@
 	
 	&-title {
 		font-size: 40px;
-		color: $gray;
+		color: $gray20;
 		
 		span {
 			font-size: 70px;
@@ -312,12 +312,12 @@
 	&-marks {
 		position: relative;
 		width: 200px;
-		margin: 0 30px;
+		margin: 0 120px;
 		height: 90px;
 		
 		span {
 			font-size: 61px;
-			color: $gray;
+			color: $gray20;
 			position: absolute;
 			cursor: default;
 		}
@@ -358,6 +358,10 @@
 			transform: rotate(-25deg);
 		}
 		
+		
+		@media #{$desk1440} {
+			margin: 0 30px;
+		}
 		@media #{$desk1250} {
 			margin: 0;
 		}

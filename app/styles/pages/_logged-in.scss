@@ -1,0 +1,262 @@
+.banner {
+	&-section {
+		background: #e3e3e3;
+		display: table;
+		width: 100%;
+	}
+	
+	&-left,
+	&-right {
+		width: 50%;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 50px;
+		background-size: cover;
+		color: $white;
+		
+		@media #{$desk1440} {
+			padding: 50px 35px;
+		}
+		@media #{$desk1250} {
+			padding: 40px 25px;
+		}
+		@media #{$desk992} {
+			display: block;
+			width: 100%;
+		}
+		@media #{$mobile768} {
+			padding: 30px 20px 35px;
+		}
+	}
+
+	&-left {
+		background-image: url(../images/bg/banner-first-bg.jpg);
+		
+		&__description {
+			width: 610px;
+			float: right;
+			color: $white;
+			
+			h2 {
+				font-size: 78px;
+				text-transform: uppercase;
+			}
+			
+			p {
+				font-size: 25px;
+				margin-top: 10px;
+				text-transform: uppercase;
+				
+				span {
+					font-size: 35px;
+				}
+			}
+			
+			.btn-tape {
+				margin-top: 20px;
+				color: #0e0e0e;
+			}
+			
+			@media #{$desk1440} {
+				width: 540px;
+			}
+			@media #{$desk1250} {
+				width: 450px;
+				padding: 30px;
+				
+				h2 {
+					font-size: 65px;
+				}
+					
+				.btn-tape {
+					display: block;
+					width: auto;
+					float: none;
+					margin: 20px 15px 0;
+				}
+			}
+			@media #{$mobile768} {
+				padding: 0;
+			}
+
+			@media #{$desk992} {
+				float: none;
+				width: 100%;
+				
+				.btn-tape {
+					max-width: 240px;
+					margin: 20px auto 0;
+				}
+			}
+			@media #{$mobile768} {
+				h2 {
+					font-size: 55px;
+				}
+
+				p {
+					font-size: 20px;
+
+					span {
+						font-size: 25px;
+					}
+				}
+			}
+			@media #{$mobile480} {
+				.btn-tape {
+					max-width: 100%;
+					margin: 20px 15px 0;
+				}
+			}
+		}
+	}
+
+	&-right {
+		background-image: url(../images/bg/banner-second-bg.jpg);
+		
+		&__description {
+			width: 610px;
+			float: left;
+			color: $white;
+			background: rgba(#d6dd3b, .85);
+			padding: 30px;
+			color: $gray20;
+			position: relative;
+			
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: block;
+				height: 11px;
+				background-image: url(../images/icons/banner-right-tape.png);
+				opacity: .85;
+			}
+
+			&:before {
+				bottom: 100%;
+			}
+
+			&:after {
+				top: 100%;
+				background-position: 0 -11px;
+			}
+			
+			h1 {
+				font-size: 135px;
+				text-transform: uppercase;
+			}
+			
+			h2 {
+				font-size: 44px;
+				text-transform: uppercase;
+			}
+			
+			form {
+				margin-top: 20px;
+				@extend %clearfix;
+				
+				input {
+					width: 45%;
+					float: left;
+					font-size: 25px;
+					font-weight: $medium;
+					color: $gray20;
+					outline: none;
+					border: none;
+					background: transparent;
+					border-bottom: 3px solid $gray20;
+					margin-top: 24px;
+
+					&::-webkit-input-placeholder {color: $gray20;}
+					&::-moz-placeholder          {color: $gray20;}
+					&:-moz-placeholder           {color: $gray20;}
+					&:-ms-input-placeholder      {color: $gray20;}
+				}
+				
+				.btn-tape {
+					width: 45%;
+					float: right;
+				}
+			}
+			
+			@media #{$desk1440} {
+				width: 540px;
+				
+				h1 {
+					font-size: 110px;
+				}
+				
+				form {
+					.btn-tape {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
+				}
+			}
+			@media #{$desk1250} {
+				width: 450px;
+
+				h1 {
+					font-size: 95px;
+				}
+				
+				form {
+					input {
+						margin-top: 0;
+						width: 100%;
+						float: none;
+					}
+					
+					.btn-tape {
+						display: block;
+						width: auto;
+						float: none;
+						margin: 20px 15px 0;
+					}
+				}
+			}
+			@media #{$desk992} {
+				float: none;
+				width: 100%;
+				
+				form {
+					.btn-tape {
+						max-width: 240px;
+						margin: 20px auto 0;
+					}
+				}
+			}
+			@media #{$mobile768} {
+				padding: 20px;
+				
+				h1 {
+					font-size: 55px;
+				}
+				h2 {
+					font-size: 30px;
+					margin-top: 4px;
+				}
+				
+				form {
+					margin-top: 10px;
+					
+					.btn-tape {
+						padding-left: 15px;
+						padding-right: 15px;
+						margin: 20px auto 0;
+					}
+				}
+			}
+			@media #{$mobile480} {
+				form {
+					.btn-tape {
+						max-width: 100%;
+						margin: 20px 15px 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -33,6 +33,7 @@
   &-logo {
     display: block;
     width: 183px;
+		height: 81px;
     float: left;
     background-color: $violet20;
     padding: 23px 0 6px;
@@ -46,7 +47,8 @@
 
     @media #{$desk992} {
       width: 170px;
-      padding-bottom: 12px;
+			height: 71px;
+			padding-top: 21px;
       background-color: $violet27;
 
       &:after {
@@ -65,11 +67,12 @@
 
     img {
       display: block;
+			height: 42px;
       margin: 0 auto;
 
       @media #{$desk992} {
         height: 36px;
-        margin-left: 25px;
+        margin-left: 24px;
       }
     }
   }

@@ -194,6 +194,10 @@
 		text-align: center;
 		padding: 130px 0 20px;
 		
+		img {
+			width: 125px;
+		}
+		
 		@media #{$desk992} {
 			padding: 60px 0 10px;
 		}

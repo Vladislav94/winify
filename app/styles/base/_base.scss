@@ -47,12 +47,6 @@ body {
 	}
 }
 
-.triangle-line {
-	background: url(../images/icons/triangle-line.png) repeat-x;
-	display: block;
-	height: 10px;
-}
-
 // Inputs
 .input {
 
@@ -318,6 +312,10 @@ input {
 	
 	&-red {
 		background-position: 0 -11px;
+	}
+	
+	&-gray {
+		background-position: 0 -22px;
 	}
 }
 

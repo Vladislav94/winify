@@ -11,11 +11,16 @@
 @import "layout/sb";
 @import "layout/footer";
 
+// Slider
+@import "bower_components/slick-carousel/slick/slick.scss";
+@import "layout/slider";
+
 // Pages
 @import "pages/affiliate";
 @import "pages/faq";
 @import "pages/settings";
 @import "pages/logged-in";
+@import "pages/promotions";
 
 // Fa-icon
 @import "fa-icon/font-awesome";

@@ -5,6 +5,21 @@
 	transition: all 0.3s linear;
 	border: none;
 	cursor: pointer;
+	text-decoration: none;
+	
+	&-clear {
+		background: transparent;
+		font-family: $roboto;
+		font-size: 25px;
+		font-weight: $medium;
+		color: $yellowd5;
+    padding: 15px 20px;
+		border: 2px solid transparent;
+		
+		&:hover {
+			border-color: $yellowd5;
+		}
+	}
 	
 	&-tape {
 		position: relative;

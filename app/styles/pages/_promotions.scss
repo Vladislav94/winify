@@ -1,0 +1,89 @@
+.promotions {
+	&-section {
+		background: url(../images/bg/promotions-bg.jpg) center top;
+		padding: 50px 0;
+		
+		.main-container {
+			padding: 0 95px;
+		}
+		
+		@media #{$desk1440} {
+			.main-container {
+				padding: 0 60px;
+			}
+		}
+		@media #{$desk1250} {
+			.main-container {
+				padding: 0 40px;
+			}
+		}
+		@media #{$desk992} {
+			.main-container {
+				padding: 0 20px;
+			}
+		}
+	}
+	
+	&-deposits {
+		&__item {
+			@extend %clearfix;
+			margin-bottom: 70px;
+		}
+		
+		&__left {
+			width: 290px;
+			float: left;
+			
+			.service-list__top {
+				font-size: 30px;
+				text-transform: uppercase;
+				
+				span {
+					line-height: 100px;
+				}
+			}
+			
+			.spins {
+				text-align: center;
+				font-size: 35px;
+				line-height: 40px;
+				text-transform: uppercase;
+				color: $white;
+				padding-top: 25px;
+				
+				&.purple {
+					color: #d9238c;
+				}
+				
+				&.yellow {
+					color: #d6de22;
+				}
+			}
+			
+			&.yellow {
+				.service-list__top {
+					color: #1f1e29;
+				}
+			}
+		}
+		
+		&__text {
+			width: calc(100% - 290px);
+			float: right;
+			padding-left: 32px;
+			padding-top: 50px;
+			color: $white;
+			
+			h1 {
+				font-size: 50px;
+				text-transform: uppercase;
+				margin-bottom: 35px;
+			}
+			
+			p {
+				font-size: 30px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

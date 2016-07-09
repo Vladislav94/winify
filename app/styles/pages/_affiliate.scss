@@ -93,21 +93,7 @@
     width: 345px;
     box-sizing: border-box;
     position: relative;
-		
-		@media #{$desk1250} {
-			margin-right: 0;
-		}
-		@media #{$desk992} {
-			width: 300px;
-			margin-top: 0;
-			padding: 30px 15px 15px;
-		}
-		@media #{$mobile768} {
-			float: none;
-			width: 100%;
-			margin-bottom: 35px;
-		}
-		
+
 		.btn {
 			display: block;
 			margin-bottom: 22px;
@@ -134,6 +120,25 @@
       top: 100%;
       background-position: 0 -10px;
     }
+		
+		@media #{$desk1250} {
+			margin-right: 0;
+		}
+		@media #{$desk992} {
+			width: 300px;
+			margin-top: 0;
+			padding: 30px 15px 15px;
+		}
+		@media #{$mobile768} {
+			float: none;
+			width: 100%;
+			margin-bottom: 35px;
+			
+			.btn {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+		}
   }
 
   &__link {

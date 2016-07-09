@@ -267,6 +267,10 @@
     background: url(../images/bg/games-bg.jpg) center top;
 		padding: 15px 0 60px;
 		
+		@media #{$mobile480} {
+			padding-bottom: 15px;
+		}
+		
 		&.fangs-line {
       &:before {
         background-position: center -72px;
@@ -276,16 +280,27 @@
 	
 	&-body {
 		padding: 0 100px;
+		
+		@media #{$desk1440} {
+			padding: 0 5px;
+		}
+		@media #{$desk1250} {
+			padding: 0;
+		}
 	}
 	
 	&-top {
 		@extend %clearfix;
 		margin-bottom: 40px;
+		
+		@media #{$mobile480} {
+			margin-bottom: 25px;
+		}
 	}
 	
 	&-list {
 		@extend %clearfix;
-		padding: 0 15px;
+		padding-right: 7px;
 		width: 75%;
 		float: left;
 		position: relative;
@@ -295,50 +310,324 @@
 			
 			content: '';
 			position: absolute;
-			width: calc(100% - 30px);
+			width: calc(100% - 8px);
 			top: 100%;
-			left: 15px;
+			left: 0;
 			background-position: 0 -33px;
+		}
+		
+		@media #{$desk992} {
+			float: none;
+			width: 100%;
+			padding-right: 0;
+			
+			&:before {
+				width: 100%;
+			}
+		}
+		@media #{$mobile480} {
+			&:before {
+				content: none;
+			}
 		}
 		
 		&__item {
 			float: left;
+			width: 33.333%;
 			font-family: $roboto;
 			font-size: 25px;
 			font-weight: $medium;
 			color: $white;
-			margin-right: 20px;
 			padding: 20px;
+			position: relative;
 			cursor: pointer;
+			text-align: center;
+			transition: all, 0.4s, linear;
+			
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+				border-bottom: 10px solid $yellowe6;
+        opacity: 0;
+				z-index: 5;
+				transition: all, 0.4s, linear;
+      }
 			
 			&.active {
 				color: $yellowbb;
+				
+				&:after {
+					opacity: 1;
+				}
+			}
+			
+			@media #{$desk1250} {
+				padding: 15px 10px;
+				font-size: 22px;
+			}
+			@media #{$mobile480} {
+				padding: 10px;
+				float: none;
+				width: 100%;
+				border: 2px solid transparent;
+
+				&:after {
+					content: none;
+				}
+
+				&.active {
+					border: 2px solid $yellowe6;
+				}
 			}
 		}
 	}
 	
 	&-search {
-		padding: 0 15px;
+		padding-left: 20px;
 		width: 25%;
 		float: right;
+		
+		@media #{$desk992} {
+			margin-top: 40px;
+			float: none;
+			width: 100%;
+			padding-left: 0;
+		}
+		@media #{$mobile480} {
+			margin-top: 25px;
+		}
 	}
 	
 	&-tab {
 		&__section {
 			color: $white;
+			@extend %clearfix;
+			
+			@media #{$desk1250} {
+				padding: 0 34px;
+			}
+			@media #{$desk992} {
+				padding: 0 60px;
+			}
+			@media #{$mobile768} {
+				padding: 0 10px;
+			}
+			@media #{$mobile480} {
+				padding: 0;
+			}
 		}
 	}
 	
 	&-item {
+		display: block;
 		width: 288px;
 		height: 214px;
 		float: left;
-		margin-right: 0;
-		margin-bottom: 15px;
+		margin-right: 29px;
+		margin-bottom: 29px;
+		text-decoration: none;
+		position: relative;
 		
 		&:nth-child(4n + 4) {
-			background: red;
 			margin-right: 0;
+		}
+		
+		@media #{$desk1250} {
+			&:nth-child(4n + 4) {
+				margin-right: 29px;
+			}
+			
+			&:nth-child(3n + 3) {
+				margin-right: 0;
+			}
+		}
+		@media #{$desk992} {
+			&:nth-child(3n + 3) {
+				margin-right: 29px;
+			}
+			&:nth-child(2n + 2) {
+				margin-right: 0;
+			}
+		}
+		@media #{$mobile480} {
+			margin: 0 auto 25px !important;
+			float: none;
+		}
+		
+		&.star,
+		&.new {
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				border: 35px solid transparent;
+			}
+			
+			&:before {
+				top: 2px;
+				right: 2px;
+				z-index: 10;
+			}
+			
+			&:after {
+				border: 39px solid transparent;
+				border-top-color: #1f2346;
+				border-right-color: #1f2346;
+				z-index: 5;
+				top: 0;
+				right: 0;
+			}
+		}
+		
+		&.star {
+			&:before {
+				border-top-color: $yellowe6;
+				border-right-color: $yellowe6;
+			}
+			
+			.games-item__image:after {
+    		content: "\f005";
+				position: absolute;
+				top: 14px;
+				right: 11px;
+				z-index: 15;
+				
+				font-family: FontAwesome;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: normal;
+				color: #202347;
+			}
+			
+			.games-item__name {
+				background: rgba($yellowe6, .45);
+			}
+		}
+		
+		&.new {
+			&:before {
+				border-top-color: #fb66c9;
+				border-right-color: #fb66c9;
+			}
+			
+			.games-item__image:after {
+    		content: "new";
+				position: absolute;
+				top: 18px;
+				right: 7px;
+				z-index: 15;
+				
+  			font-family: $rBlack;
+				font-size: 16px;
+  			font-weight: 600;
+				text-transform: uppercase;
+				color: #202347;
+				transform: rotate(47deg);
+				
+    		-webkit-backface-visibility: hidden;
+			}
+			
+			.games-item__name {
+				background: rgba(#fb66c9, .45);
+			}
+		}
+		
+		&__image {
+			display: table;
+			width: 100%;
+			height: 155px;
+			background-size: cover;
+			position: relative;
+			transition: all, 0.4s, linear;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba($yellowe6, .6);
+				transition: all, 0.4s, linear;
+				opacity: 0;
+				visibility: hidden;
+			}
+			
+			.image-inner {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				position: relative;
+				z-index: 5;
+				transition: all, 0.4s, linear;
+				opacity: 0;
+				visibility: hidden;
+				
+				.icon,
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+				
+				span {
+					font-size: 34px;
+					color: #202347;
+					text-transform: uppercase;
+				}
+			}
+		}
+		
+		&__name {
+			display: table;
+			width: 100%;
+			height: calc(100% - 155px);
+			text-align: center;
+			background: rgba(#0e1356, .45);
+			font-size: 18px;
+			text-transform: uppercase;
+			color: $white;
+			position: relative;
+			transition: all, 0.4s, linear;
+			
+			&:before {
+				@extend .fangs-line:before;
+				
+				background-position: 0 -81px;
+				transition: all, 0.4s, linear;
+				opacity: 0;
+				visibility: hidden;
+			}
+			
+			span {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+		
+		&:hover {
+			.games-item__image {
+				&:before {
+					opacity: 1;
+					visibility: visible;
+				}
+				
+				.image-inner {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.games-item__name {
+				background: $yellowe6;
+				color: $violet20;
+				
+				&:before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
 		}
 	}
 }

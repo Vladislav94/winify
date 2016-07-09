@@ -265,7 +265,7 @@
 .games {
 	&-section {
     background: url(../images/bg/games-bg.jpg) center top;
-		padding: 15px 0 60px;
+		padding: 25px 0 60px;
 		
 		@media #{$mobile480} {
 			padding-bottom: 15px;
@@ -288,6 +288,42 @@
 			padding: 0;
 		}
 	}
+
+&-winners {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex; 
+	margin-bottom: 25px;
+	
+	&__item {
+		flex: 1 auto;
+		margin-right: 28px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	@media #{$desk992} {
+		flex-wrap: wrap;
+		
+		&__item {
+			margin-right: 15px;
+			&:nth-child(2n + 2) {
+				margin-right: 0;
+			}
+		}
+	}
+	@media #{$mobile768} {
+		display: block;
+
+		&__item {
+			margin-right: 0;
+		}
+	}
+}
 	
 	&-top {
 		@extend %clearfix;
@@ -386,7 +422,7 @@
 	}
 	
 	&-search {
-		padding-left: 20px;
+		padding-left: 23px;
 		width: 25%;
 		float: right;
 		

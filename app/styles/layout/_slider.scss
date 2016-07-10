@@ -1,0 +1,114 @@
+.slider {
+	&-section {
+		.slick-arrow {
+			position: absolute;
+			top: 50%;
+			margin-top: -57px;
+			width: 58px;
+			height: 115px;
+			border: none;
+			outline: none;
+			background: none;
+			background-image: url(../images/slider/arrows.png);
+			background-repeat: no-repeat;
+			text-indent: -99999px;
+			cursor: pointer;
+			z-index: 5;
+			opacity: .78;
+			transition: all, 0.4s, linear;
+			
+			&:hover {
+				opacity: 1;
+			}
+			
+			&.slick-prev {
+				left: 0;
+			}
+			
+			&.slick-next {
+				right: 0;
+				background-position: -58px 0;
+			}
+		}
+	}
+	
+	&-item {
+		padding: 50px 0;
+		outline: none;
+		background-size: cover;
+		
+		.main-container {
+			padding: 0 95px;
+		}
+		
+		@media #{$desk1440} {
+			.main-container {
+				padding: 0 60px;
+			}
+		}
+		@media #{$mobile768} {
+			padding: 25px 0;
+		}
+	}
+	
+	&-inner {
+		width: 640px;
+		background: rgba(#5f254b, .73);
+		padding: 35px 25px;
+		color: $white;
+		position: relative;
+		
+		@media #{$mobile768} {
+			width: 100%;
+		}
+		
+		&.right {
+			float: right;
+			text-align: right;
+		}
+		
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 12px;
+			opacity: .73;
+			background: url(../images/icons/slider-inner-tape.png) repeat-x;
+		}
+		
+		&:before {
+			bottom: 100%;
+		}
+		
+		&:after {
+			top: 100%;
+			background-position: 0 -12px;
+		}
+		
+		p {
+			font-size: 45px;
+			text-transform: uppercase;
+			line-height: 55px;
+			
+			span {
+				font-size: 60px;
+			}
+		}
+		
+		&__button {
+			@extend %clearfix;
+			margin-top: 25px;
+			
+			.btn-tape {
+				width: 40%;
+				float: left;
+			}
+			.btn-clear {
+				width: 52%;
+				float: right;
+			}
+		}
+	}
+}

@@ -1,5 +1,6 @@
 $(document).ready(function() {
-// Tabs
+	
+	// Tabs
   var $tabsList = $('.tabs-list');
 
   $tabsList.on('click', '.tabs-item', function() {

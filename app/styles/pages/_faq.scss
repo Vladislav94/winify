@@ -161,6 +161,41 @@
 			width: 100%;
 			float: none;
 		}
+
+		&__yellow,
+		&__purple {
+			&.mark {
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					top: -8px;
+					right: -10px;
+					height: 48px;
+					width: 37px;
+					background-image: url(../images/icons/winners-mark.png);
+					background-repeat: no-repeat;
+					background-size: 72px 48px;
+				}
+			}
+		}
+
+		&__yellow {
+			.winners-list__item {
+				background: rgba($yellowd8, .5);
+			}
+		}
+
+		&__purple {
+			.winners-list__item {
+				background: rgba(#f364c3, .5);
+			}
+			&.mark {
+				&:after {
+					background-position: -37px 0;
+				}
+			}
+		}
 		
 		&__left {
 			padding-right: 15px;
@@ -172,10 +207,6 @@
 			
 			.title {
 				color: $yellowd8;
-			}
-			
-			.winners-list__item {
-				background: rgba($yellowd8, .5);
 			}
 		}
 		
@@ -192,10 +223,6 @@
 				&:after {
 					background-position: -63px 0;
 				}
-			}
-			
-			.winners-list__item {
-				background: rgba(#f364c3, .5);
 			}
 		}
 		

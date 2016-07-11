@@ -454,6 +454,19 @@
 			@media #{$mobile480} {
 				padding: 0;
 			}
+
+			.tabs-section__inner {
+			 @extend %clearfix;
+			}
+			.load-more {
+				margin-top: 20px;
+				
+				.btn {
+					width: 600px;
+					display: block;
+					margin: auto;
+				}
+			}
 		}
 	}
 	
@@ -606,6 +619,24 @@
 				span {
 					display: inline-block;
 					vertical-align: middle;
+				}
+				
+				.icon {
+					position: relative;
+					width: 74px;
+					
+					.play {
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 5;
+					}
+					
+					.rotate {
+						-webkit-animation: rotate 4s linear infinite;
+						-moz-animation: rotate 4s linear infinite;
+						animation: rotate 4s linear infinite;
+					}
 				}
 				
 				span {

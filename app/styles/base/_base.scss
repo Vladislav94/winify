@@ -98,8 +98,8 @@ input {
 	&-btn {
 		position: absolute;
 		right: 0;
-		bottom: 0;
-		top: 0;
+		bottom: -2px;
+		top: -2px;
 		width: 37px;
 		display: block;
 		border: none;
@@ -110,6 +110,7 @@ input {
 		outline: none;
 		cursor: pointer;
 		transition: $trans;
+		box-shadow: none;
 
 		&:before,
 		&:after {
@@ -441,4 +442,20 @@ input {
   opacity: 0;
   z-index: 10;
   transition: $trans;
+}
+
+@-moz-keyframes rotate { 
+	100% { 
+		-moz-transform: rotate(360deg); 
+	}
+}
+@-webkit-keyframes rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes rotate {
+	100% {
+		transform:rotate(360deg);
+	}
 }

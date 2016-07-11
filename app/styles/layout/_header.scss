@@ -9,6 +9,91 @@
     }
   }
 
+	&-login {
+		float: right;
+		height: 81px;
+		background: $yellowd5;
+		padding: 20px 10px 0;
+		position: relative;
+		
+		&:before,
+		&:after {
+			content: '';
+			border: 22px solid transparent;
+			border-right-color: $yellowd5;
+			position: absolute;
+			right: 100%;
+		}
+		
+		&:before {
+			top: 0;
+			border-top-color: $yellowd5;
+		}
+		
+		&:after {
+			bottom: 0;
+			border-bottom-color: $yellowd5;
+		}
+		
+		.btn + .btn {
+			&:before {
+				content: '';
+				position: absolute;
+				top: 5px;
+				right: 100%;
+				height: 27px;
+				width: 2px;
+				background: #1d1727;
+			}
+		}
+		
+		.btn-tape {
+			background: transparent;
+			padding: 10px;
+			margin: 0;
+			&__mark {
+				&:before,
+				&:after {
+					content: none;
+				}
+			}
+		}
+		
+		@media #{$desk992} {
+			float: none;
+			height: auto;
+			background: none;
+			padding: 0;
+			
+			&:before,
+			&:after {
+				content: none;
+			}
+			
+			.btn + .btn {
+				margin-top: 15px;
+				
+				&:before {
+					content: none;
+				}
+			}
+			
+			.btn-tape {
+				background: $yellowd5;
+				display: block;
+				margin-left: 10px;
+				margin-right: 10px;
+				
+				&__mark {
+					&:before,
+					&:after {
+						content: '';
+					}
+				}
+			}
+		}
+	}
+
   &-inner {
     width: 1440px;
     margin: 0 auto;

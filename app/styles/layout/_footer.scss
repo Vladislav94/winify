@@ -192,7 +192,15 @@
 	
 	&-logo {
 		text-align: center;
-		padding: 130px 0 20px;
+		padding: 55px 0 0;
+		
+		&__text {
+			margin-bottom: 30px;
+			font-family: $roboto;
+			font-size: 15px;
+			font-weight: $normal;
+			color: #5d5f71;
+		}
 		
 		img {
 			width: 125px;

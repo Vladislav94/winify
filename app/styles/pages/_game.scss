@@ -1,0 +1,15 @@
+.game {
+  &-section {
+    @extend %clearfix;
+  }
+  
+  &-body {
+    float: left;
+    width: 920px;
+  }
+
+  &-sb {
+    float: right;
+    width: 290px;
+  }
+}

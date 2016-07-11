@@ -52,4 +52,51 @@ $(document).ready(function() {
       $('.dropdown-wrap.dropdown-open').removeClass('dropdown-open');
     };
   });
+
+  // settings
+  var $settingSec = $('.settings-section'),
+      $settingSb = $('.settings-sb'),
+      $settingBody = $('.settings-body'),
+      settingsH = [$settingSb.outerHeight(), $settingBody.outerHeight()];
+      console.log(settingsH);
+
+      addWidth();
+
+      $(window).resize(function() {
+        addWidth();
+      });
+
+      function addWidth() {
+        if ($(window).width() < 768) {
+          $settingSec.css('height', 'auto');
+          $settingSb.css('height', 'auto');
+          $settingBody.css('height', 'auto');
+          return
+        }
+        var windowH = $(window).height(),
+            headerH = $('.header').height(),
+            sectionH = windowH - headerH;
+        settingsH = [$settingSb.outerHeight(), $settingBody.outerHeight()];
+
+        if (settingsH[0] > settingsH[1]) {
+          settingBody.css('height', settingsH[0]+'px');
+          if (settingsH[0] > sectionH) {
+            $settingSec.css('height', 'auto');
+          } else {
+            $settingSec.css('height', sectionH+'px');
+            $settingSb.css('height', sectionH+'px');
+            $settingBody.css('height', sectionH+'px');
+          }
+        } else {
+          $settingSb.css('height', settingsH[1]+'px');
+          if (settingsH[1] > sectionH) {
+            $settingSec.css('height', 'auto');
+          } else {
+            $settingSec.css('height', sectionH+'px');
+            $settingSb.css('height', sectionH+'px');
+            $settingBody.css('height', sectionH+'px');
+          }
+        }
+        console.log();
+      };
 });

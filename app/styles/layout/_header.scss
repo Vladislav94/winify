@@ -186,6 +186,10 @@
       background-color: $blue1b;
       display: none;
 
+      &.showed {
+        display: block;
+      }
+
       &:before {
         content: '';
         background: url(../images/icons/nav-mob-border.png) repeat-y;

@@ -17,17 +17,16 @@ $(document).ready(function() {
   });
 
   // Nav
-
   var $navClose = $('.header-nav__close'),
       $navOpen = $('.header-nav__open'),
       $nav = $('.header-nav');
 
   $navClose.on('click', function() {
-    $nav.fadeOut();
+    $nav.removeClass('showed');
   });
 
   $navOpen.on('click', function() {
-    $nav.fadeIn();
+    $nav.addClass('showed');
   });
 
   // Dropdown

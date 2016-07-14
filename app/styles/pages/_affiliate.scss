@@ -189,7 +189,12 @@
   &-help {
     position: absolute;
     right: 0;
-		display: none;
+    top: 0;
+    
+    @media #{$desk1250} {
+      position: static;
+      margin-top: 25px;
+    }
   }
 
   &-section {

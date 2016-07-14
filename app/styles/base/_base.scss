@@ -6,7 +6,6 @@
 
 body {
   font-family: $rBlack;
-  font-weight: 600;
   background: url(../images/bg/settings-bg.jpg);
   background-attachment: fixed;
   background-size: cover;
@@ -403,29 +402,138 @@ input {
 	&-gray {
 		background-position: 0 -22px;
 	}
+  
+  &-white {
+    background-position: 0 -33px;
+  }
 }
 
 
 // help block
-
 .b-help {
   background-color: $blue2b;
+  font-family: $rBlack;
+
+  &-header {
+    background-color: $violet2e;
+    padding: 5px 10px;
+
+    &__btn {
+      width: 16px;
+      height: 6px;
+      background-color: #585d9d;
+      display: block; 
+    }
+  }
 
   &-body {
-    padding: 15px 24px 10px 35px;
+    padding: 15px 24px 10px 20px;
   }
 
   &-title {
     background-color: $yellowd5;
     font-size: 13px;
+    padding: 8px 10px 9px;
     color: $violet2e;
     text-transform: uppercase;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      margin-top: -8px;
+      border: 8px solid transparent;
+      border-right-color: $yellowd5;
+    }
+  }
+
+  &-footer {
+    background-color: $yellowd5;
+    position: relative;
+    margin-top: 27px;
+    padding: 10px 10px 10px 15px;
+    @extend %clearfix;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: url(../images/icons/help-footer-line.png);
+    }
+  }
+
+  &-tbox {
+    margin-right: 85px;
+    border-bottom: 2px solid #a3aa43;
+  }
+
+  &-input {
+    background: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    color: $violet2e;
+    resize: none;
+    border: none;
+    padding: 3px 0;
+    outline: none;
     font-family: $rBlack;
+  }
+
+  &-btn {
+    font-size: 13px;
+    color: $yellowd5;
+    text-transform: uppercase;
+    background-color: $violet2e;
+    border: none;
+    border-radius: 0;
+    padding: 4px 8px;
+    font-family: $rBlack;
+    position: relative;
+    cursor: pointer;
+    transition: $trans;
+
+    &:hover {
+      background-color: darken($violet2e, 5%);
+
+      &:before {
+        border-top-color: darken($violet2e, 5%);
+      }
+
+      &:after {
+        border-bottom-color: darken($violet2e, 5%);
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 100%;
+      border: 5px solid transparent;
+      border-right-width: 0;
+      transition: $trans;
+    }
+
+    &:before {
+      top: 0;
+      border-top: 12px solid $violet2e;
+    }
+
+    &:after {
+      bottom: 0;
+      border-bottom: 12px solid $violet2e;
+    }
   }
 }
 
 // dropdown
-
 .dropdown-wrap {
   position: relative;
 

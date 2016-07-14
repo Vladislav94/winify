@@ -186,10 +186,10 @@
       background-color: $blue1b;
       opacity: 0;
       visibility: hidden;
+      transition: opacity .2s linear, visibility .2s linear;
 
 
       &.showed {
-        transition: $trans;
         opacity: 1;
         visibility: visible;
       }

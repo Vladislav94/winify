@@ -22,11 +22,11 @@ $(document).ready(function() {
       $nav = $('.header-nav');
 
   $navClose.on('click', function() {
-    $nav.fadeOut();
+    $nav.removeClass('showed');
   });
 
   $navOpen.on('click', function() {
-    $nav.fadeIn();
+    $nav.addClass('showed');
   });
 
   // Dropdown

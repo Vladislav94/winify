@@ -1,15 +1,170 @@
 .game {
   &-section {
     @extend %clearfix;
+    height: 691px;
+    background: url(../images/game-bg.png) center;
+    margin: 35px 50px;
+    padding: 21px 54px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 9px;
+      display: block;
+      background: url(../images/icons/game-bg-tape.png) no-repeat;
+
+        @media #{$desk992} {
+          content: none;
+        }
+      }
+
+    &:before {
+      bottom: 100%;
+      background-position: center top;
+    }
+
+    &:after {
+      top: 100%;
+      background-position: center -15px;
+    }
+
+    @media #{$desk1440} {
+      margin: 35px 30px;
+      padding: 21px 30px;
+    }
+
+    @media #{$desk1250} {
+      padding: 21px 15px;
+      margin: 35px 0;
+    }
+
+    @media #{$desk992} {
+      height: auto;
+    }
   }
   
   &-body {
     float: left;
     width: 920px;
+
+    @media #{$desk1440} {
+      width: 810px;
+    }
+
+    @media #{$desk1250} {
+      width: 655px;
+    }
+
+    @media #{$desk992} {
+      width: 100%;
+      float: none;
+    }
   }
 
   &-sb {
     float: right;
     width: 290px;
+
+    @media #{$desk992} {
+      width: 100%;
+      float: none;
+      margin-top: 20px;
+    }
+
+    &__head {
+      background-color: $violet2e;
+      @extend %clearfix;
+      padding: 10px 20px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: url(../images/icons/game-sb-head.png) repeat-x;
+      }
+
+      .fa {
+        font-size: 28px;
+        color: $white;
+
+        &.fa-arrows-alt {
+          font-size: 24px;
+        }
+      }
+
+      .flag-icon {
+        font-size: 25px;
+        border-radius: 50%;
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 9px;
+    }
+
+    &-close {
+      right: 10px;
+      top: 7px;
+      position: absolute;
+    }
+
+    &__title {
+      font-size: 25px;
+      color: $yellowe1;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      margin: 13px 0;
+    }
+
+    &__btn {
+      display: block;
+      background-color: #f364c3;
+
+      .btn-tape__right {
+
+        &:before,
+        &:after {
+          border-left-color: #f364c3;
+        }
+        &:before {
+          border-top-color: #f364c3;
+        }
+        &:after {
+          border-bottom-color: #f364c3;
+        }
+      }
+
+      .btn-tape__left {
+
+        &:before,
+        &:after {
+          border-right-color: #f364c3;
+        }
+        &:before {
+          border-top-color: #f364c3;
+        }
+        &:after {
+          border-bottom-color: #f364c3;
+        }
+      }
+    }
+
+    &__zigzag {
+      margin-top: 30px;
+      display: block;
+    }
   }
 }

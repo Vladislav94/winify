@@ -253,6 +253,22 @@
 			color: $white;
 			padding: 0 10px;
 			margin-bottom: 15px;
+
+      &.gray {
+        background-color: #2c2f3c;
+      }
+
+      &.purple {
+        background-color: #5f254b;
+      }
+
+      &.blue {
+        background-color: #272950;
+      }
+
+      &.yellow {
+        background-color: #626944;
+      }
 		}
 		
 		&__image,

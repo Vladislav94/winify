@@ -151,10 +151,10 @@
 			h2 {
 				font-size: 44px;
 				text-transform: uppercase;
+				margin-bottom: 20px;
 			}
 			
 			form {
-				margin-top: 20px;
 				@extend %clearfix;
 				
 				input {
@@ -173,11 +173,62 @@
 					&::-moz-placeholder          {color: $gray20;}
 					&:-moz-placeholder           {color: $gray20;}
 					&:-ms-input-placeholder      {color: $gray20;}
+					
+					&[type="checkbox"] {
+						margin: 0;
+						display: inline-block;
+						width: auto;
+						margin-right: 5px;
+					}
+				}
+				
+				label {
+					display: inline-block;
+					margin-bottom: 20px;
+					
+					a {
+						display: inline-block;
+						color: $white;
+						text-decoration: none;
+						border-bottom: 1px solid transparent;
+						transition: all, 0.4s, linear;
+						
+						&:hover {
+							border-bottom-color: $white;
+						}
+					}
 				}
 				
 				.btn-tape {
 					width: 45%;
 					float: right;
+				}
+			}
+			
+			.inner {
+
+				
+				input {
+					width: 100%;
+					float: none;
+					margin-top: 0;
+					margin-bottom: 24px;
+				}
+				
+				.btn {
+					font-size: 30px;
+					display: block;
+					width: 100%;
+					padding: 10px;
+					text-transform: uppercase;
+					color: $gray20;
+					background: transparent;
+					border: 3px solid $gray20;
+					
+					&:hover {
+						background: $gray20;
+						color: $white;
+					}
 				}
 			}
 			
@@ -202,18 +253,21 @@
 					font-size: 95px;
 				}
 				
+				h2 {
+					margin-bottom: 0;
+				}
+				
 				form {
 					input {
-						margin-top: 0;
 						width: 100%;
 						float: none;
 					}
 					
 					.btn-tape {
 						display: block;
-						width: auto;
+						width: calc(100% - 30px);
 						float: none;
-						margin: 20px 15px 0;
+						margin: 20px 0 0 15px;
 					}
 				}
 			}
@@ -268,7 +322,7 @@
 		padding: 25px 0 60px;
 		
 		@media #{$mobile480} {
-			padding-bottom: 15px;
+			padding-bottom: 40px;
 		}
 		
 		&.fangs-line {
@@ -466,6 +520,14 @@
 					display: block;
 					margin: auto;
 				}
+				
+				@media #{$desk992} {
+					.btn {
+						width: calc(100% - 40px);
+						display: block;
+						
+					}
+}
 			}
 		}
 	}

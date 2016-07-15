@@ -35,7 +35,47 @@
 			border-bottom-color: $yellowd5;
 		}
 		
-		.btn + .btn {
+		&-inner {
+			width: 234px;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background: $yellowd5;
+			border-top: 1px solid #1d1727;
+			border-bottom: 1px solid #1d1727;
+
+			padding: 20px;
+			z-index: 10;
+			
+			input {
+				width: 100%;
+				background: transparent;
+				border: none;
+				outline: none;
+				border-bottom: 2px solid #1d1727;
+				margin-bottom: 15px;
+				font-size: 16px;
+				
+  			&::-webkit-input-placeholder {color: #1d1727;}
+  			&::-moz-placeholder          {color: #1d1727;}
+  			&:-moz-placeholder           {color: #1d1727;}
+  			&:-ms-input-placeholder      {color: #1d1727;}
+			}
+			
+			.btn {
+				font-size: 16px;
+				background: transparent;
+				border: 2px solid #1d1727;
+				text-transform: uppercase;
+				
+				&:hover {
+					background: #1d1727;
+					color: $yellowd5;
+				}
+			}
+		}
+		
+		.btn-before {
 			&:before {
 				content: '';
 				position: absolute;
@@ -51,6 +91,20 @@
 			background: transparent;
 			padding: 10px;
 			margin: 0;
+			
+			&:hover {
+				opacity: 1;
+			}
+			
+			&-text {
+				border-bottom: 2px solid transparent;
+				transition: all, 0.4s, linear;
+				
+				&:hover {
+					border-bottom-color: #1d1727;
+				}
+			}
+
 			&__mark {
 				&:before,
 				&:after {
@@ -70,7 +124,19 @@
 				content: none;
 			}
 			
-			.btn + .btn {
+			&-inner {
+				position: static;
+				margin-top: 15px;
+				width: 100%;
+				padding: 15px;
+				
+				.btn {
+					display: block;
+					width: 100%;
+				}
+			}
+			
+			.btn-before {
 				margin-top: 15px;
 				
 				&:before {
@@ -263,6 +329,10 @@
     @extend %clearfix;
     padding-left: 15px;
     float: left;
+		
+		@media #{$desk1250} {
+			padding-left: 10px;
+		}
 
     @media #{$desk992} {
       padding-left: 0;
@@ -421,7 +491,7 @@
     padding: 19px 0;
 
     @media #{$desk1250} {
-      margin-left: 29px;
+      margin-left: 15px;
     }
 
     @media #{$desk992} {

@@ -430,6 +430,7 @@ input {
   position: relative;
 
   &.dropdown-open .dropdown {
+		display: block;
     visibility: visible;
     opacity: 1;
   }
@@ -440,6 +441,7 @@ input {
   top: 100%;
   visibility: hidden;
   opacity: 0;
+	display: none;
   z-index: 10;
   transition: $trans;
 }

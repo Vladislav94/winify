@@ -17,7 +17,6 @@ $(document).ready(function() {
   });
 
   // Nav
-
   var $navClose = $('.header-nav__close'),
       $navOpen = $('.header-nav__open'),
       $nav = $('.header-nav');
@@ -53,7 +52,7 @@ $(document).ready(function() {
     };
   });
 
-  // settings
+  // Settings
   var $settingSec = $('.settings-section'),
       $settingSb = $('.settings-sb'),
       $settingBody = $('.settings-body'),
@@ -99,4 +98,18 @@ $(document).ready(function() {
         }
         console.log();
       };
+	
+	// Sign Up
+	var $signBtn = $('#signUpBtn'),
+			$signFirst = $('#signUpFirst'),
+			$signSecond = $('#signUpSecond');
+
+			$signSecond.hide();
+			
+			$signBtn.click(function(e){
+				$signFirst.slideUp(800);
+				$signSecond.slideDown(800);
+				e.preventDefault();
+			})
+
 });

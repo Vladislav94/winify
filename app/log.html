@@ -48,14 +48,22 @@
           </div>
 -->
          
-          <div class="header-login">
-            <a href="#" class="btn btn-tape">
+          <div class="header-login dropdown-wrap">
+            <a href="#" class="btn btn-tape dropdown-show">
               <span class="btn-tape__mark btn-tape__left"></span>
               <span class="btn-tape-text">Log in</span>
               <span class="btn-tape__mark btn-tape__right"></span>
             </a>
+            
+            <div id="loginForm" class="header-login-inner dropdown">
+							<form action="">
+								<input type="text" placeholder="Email">
+								<input type="text" placeholder="Password">
+								<button type="submit" class="btn">Log in</button>
+							</form>
+          	</div>
            
-            <a href="#" class="btn btn-tape">
+            <a href="#" class="btn btn-tape btn-before">
               <span class="btn-tape__mark btn-tape__left"></span>
               <span class="btn-tape-text">SIGN UP</span>
               <span class="btn-tape__mark btn-tape__right"></span>
@@ -93,24 +101,14 @@
           </ul>
 
           <div class="header-lang dropdown-wrap">
-            <span class="header-lang__icon flag-icon flag-icon-ua flag-icon-squared dropdown-show"></span>
+            <span class="header-lang__icon flag-icon flag-icon-us flag-icon-squared dropdown-show"></span>
 
             <div class="dropdown header-lang__dd">
-              <span class="header-lang__icon flag-icon flag-icon-ad flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-ae flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-af flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-ag flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-ai flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-al flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-am flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-ao flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-aq flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-ar flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-bm flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-cc flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-cg flag-icon-squared"></span>
-              <span class="header-lang__icon flag-icon flag-icon-ci flag-icon-squared"></span>
               <span class="header-lang__icon flag-icon flag-icon-cn flag-icon-squared"></span>
+              <span class="header-lang__icon flag-icon flag-icon-ru flag-icon-squared"></span>
+              <span class="header-lang__icon flag-icon flag-icon-es flag-icon-squared"></span>
+              <span class="header-lang__icon flag-icon flag-icon-pt flag-icon-squared"></span>
+              <span class="header-lang__icon flag-icon flag-icon-de flag-icon-squared"></span>
             </div>
           </div>
         </nav>
@@ -132,15 +130,22 @@
 		</div>
 		<div class="banner-right">
 			<div class="banner-right__description">
-				<h1>BIGGEST</h1>
-				<h2>Bitcoin based casino</h2>
-				<form action="">
-					<input type="text" placeholder="Your e-mail">
-					<a type="submit" class="btn btn-tape btn-tape__large btn-tape__gray">
+				<form id="signUpFirst" action="">
+					<h1>BIGGEST</h1>
+					<h2>Bitcoin based casino</h2>
+					<input type="email" placeholder="Your e-mail">
+					<button type="submit" id="signUpBtn" class="btn btn-tape btn-tape__large btn-tape__gray">
 						<span class="btn-tape__mark btn-tape__left"></span>
 						<span class="btn-tape-text">SIGN UP now!</span>
 						<span class="btn-tape__mark btn-tape__right"></span>
-					</a>
+					</button>
+				</form>
+				<form id="signUpSecond" action="" class="inner">
+					<input type="text" placeholder="Email" required>
+					<input type="email" placeholder="Username" required>
+					<input type="passwrod" placeholder="Password" required>
+					<label><input type="checkbox" />I accept the <a href="#">terms &amp; conditions</a></label>
+					<button type="submit" class="btn">Sign Up</button>
 				</form>
 			</div>
 		</div>
@@ -158,7 +163,7 @@
 							</div>
 							<div class="winners-list__description">
 								<div class="winner">JOSH1998 just won</div>
-								<div class="amount">$ 59,999</div>
+								<div class="amount">BTC 10.12345678</div>
 								<div class="link"><a href="#">in Lucky Coin</a></div>
 							</div>
 						</li>
@@ -172,7 +177,7 @@
 							</div>
 							<div class="winners-list__description">
 								<div class="winner">JOSH1998 just won</div>
-								<div class="amount">$ 59,999</div>
+								<div class="amount">BTC 10.12345678</div>
 								<div class="link"><a href="#">in Lucky Coin</a></div>
 							</div>
 						</li>
@@ -186,7 +191,7 @@
 							</div>
 							<div class="winners-list__description">
 								<div class="winner">JOSH1998 just won</div>
-								<div class="amount">$ 59,999</div>
+								<div class="amount">BTC 10.12345678</div>
 								<div class="link"><a href="#">in Lucky Coin</a></div>
 							</div>
 						</li>
@@ -200,7 +205,7 @@
 							</div>
 							<div class="winners-list__description">
 								<div class="winner">JOSH1998 just won</div>
-								<div class="amount">$ 59,999</div>
+								<div class="amount">BTC 10.12345678</div>
 								<div class="link"><a href="#">in Lucky Coin</a></div>
 							</div>
 						</li>
@@ -739,7 +744,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -749,7 +754,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -759,7 +764,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -769,7 +774,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -788,7 +793,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -798,7 +803,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -808,7 +813,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>
@@ -818,7 +823,7 @@
   						</div>
   						<div class="winners-list__description">
   							<div class="winner">JOSH1998 just won</div>
-  							<div class="amount">$ 59,999</div>
+  							<div class="amount">BTC 10.12345678</div>
   							<div class="link"><a href="#">in Lucky Coin</a></div>
   						</div>
   					</li>

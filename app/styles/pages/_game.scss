@@ -69,6 +69,11 @@
     float: right;
     width: 290px;
 
+    .winners-list__image,
+    .winners-list__description {
+      padding: 6px 10px;
+    }
+
     @media #{$desk992} {
       width: 100%;
       float: none;
@@ -121,7 +126,7 @@
     &__title {
       font-size: 25px;
       color: $yellowe1;
-      margin-top: 25px;
+      margin-top: 20px;
       text-transform: uppercase;
     }
 
@@ -164,6 +169,7 @@
 
     &__zigzag {
       margin-top: 30px;
+      margin-bottom: 15px;
       display: block;
     }
   }

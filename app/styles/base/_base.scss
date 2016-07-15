@@ -110,6 +110,7 @@ input {
 		cursor: pointer;
 		transition: $trans;
 		box-shadow: none;
+		padding: 0;
 
 		&:before,
 		&:after {
@@ -413,6 +414,8 @@ input {
 .b-help {
   background-color: $blue2b;
   font-family: $rBlack;
+	position: relative;
+	z-index: 5;
 
   &-header {
     background-color: $violet2e;

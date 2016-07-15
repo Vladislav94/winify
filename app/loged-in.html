@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>loged-in</title>
 
   <!-- build:css styles/vendor.css -->
@@ -107,15 +107,22 @@
 		</div>
 		<div class="banner-right">
 			<div class="banner-right__description">
-				<h1>BIGGEST</h1>
-				<h2>Bitcoin based casino</h2>
-				<form action="">
-					<input type="text" placeholder="Your e-mail">
-					<a type="submit" class="btn btn-tape btn-tape__large btn-tape__gray">
+				<form id="signUpFirst" action="">
+					<h1>BIGGEST</h1>
+					<h2>Bitcoin based casino</h2>
+					<input type="email" placeholder="Your e-mail">
+					<button type="submit" id="signUpBtn" class="btn btn-tape btn-tape__large btn-tape__gray">
 						<span class="btn-tape__mark btn-tape__left"></span>
 						<span class="btn-tape-text">SIGN UP now!</span>
 						<span class="btn-tape__mark btn-tape__right"></span>
-					</a>
+					</button>
+				</form>
+				<form id="signUpSecond" action="" class="inner">
+					<input type="text" placeholder="Email" required>
+					<input type="email" placeholder="Username" required>
+					<input type="passwrod" placeholder="Password" required>
+					<label><input type="checkbox" />I accept the <a href="#">terms &amp; conditions</a></label>
+					<button type="submit" class="btn">Sign Up</button>
 				</form>
 			</div>
 		</div>

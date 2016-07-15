@@ -112,4 +112,15 @@ $(document).ready(function() {
 				e.preventDefault();
 			})
 
+	// Header subnav
+			$('#header-list').find('ul').hide();
+	
+			$('#header-list > li > a').on({
+    		mouseenter: function () {
+					$(this).next().show();
+    		},
+    		mouseleave: function () {
+        	$(this).next().hide();
+    		}
+			});
 });

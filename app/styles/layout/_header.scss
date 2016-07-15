@@ -11,7 +11,7 @@
 
 	&-login {
 		float: right;
-		height: 81px;
+		height: 80px;
 		background: $yellowd5;
 		padding: 20px 10px 0;
 		position: relative;
@@ -184,7 +184,7 @@
   &-logo {
     display: block;
     width: 183px;
-		height: 81px;
+		height: 80px;
     float: left;
     background-color: $violet20;
     padding: 23px 0 6px;
@@ -368,6 +368,53 @@
       }
     }
 
+		ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: $violet2e;
+			padding: 20px 20px 10px;
+			z-index: 15;
+			width: 250px;
+			border-top: 1px solid $yellowd5;
+			
+			li {
+				margin-bottom: 10px;
+			}
+
+			a {
+				color: $white;
+				font-size: 18px;
+				transition: $trans;
+				display: block;
+				text-decoration: none;
+				
+				&:hover {
+					color: $yellowbb;
+				}
+			}
+			
+			@media #{$desk992} {
+				display: block;
+				position: static;
+				width: 100%;
+				padding: 15px 15px 5px;
+				
+				a {
+					font-size: 15px;
+				}
+}
+		}
+
+		> li {
+			position: relative;
+			
+			&:hover ul {
+				display: block;
+			}
+		}
+
     &__link {
       color: inherit;
       text-decoration: none;
@@ -389,7 +436,7 @@
 
   &-lang {
     float: left;
-    padding: 22px 15px 25px;
+    padding: 21px 15px 25px;
 
     &.dropdown-open {
       background-color: $blue1b;
